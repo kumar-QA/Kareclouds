@@ -1,11 +1,16 @@
 package com.Kareclouds.Pages;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
 public class PatientPage extends GenericPage {
 
@@ -69,6 +74,10 @@ public class PatientPage extends GenericPage {
 	WebElement PatientIdFirstCell;
 	@FindBy(css="tbody tr:last-child td:first-child")
 	WebElement PatientIdLastcell;
+	
+	//test
+	@FindBy(xpath="//table[@id='DataTables_Table_0']/tbody/tr/td[1")
+	List<WebElement> patientIdTotalCol;
 	
 	@FindBy(css="th[aria-label='Patient Name: activate to sort column ascending']")
 	WebElement PatientNameBeforeClick;
@@ -211,7 +220,6 @@ public class PatientPage extends GenericPage {
 				}
 			return order;
 		}
-	
 	public String checkTableColumnSorting(String Webelement,String value) {
 		if(Webelement.equalsIgnoreCase("PatientId")){
 			if(PatientIdFirstCell.getText().equalsIgnoreCase(value)) {
@@ -282,5 +290,316 @@ public class PatientPage extends GenericPage {
 		return OperationTheatreTitle.getText();
 	}
 	
+	//--------------------------------------------------------Best Ways for Sorting------------------------------------------------------------------------
+	
+	List<String> patient=new ArrayList<String>();
+	List<WebElement> TotalIds;
+	boolean flag;
+	String firstCell;
+	String LastCell;
+	int totalpages;
+	List<List<String>> data;
+//	public boolean sortingPatientID_1stway() throws InterruptedException {	
+//		
+//	int totalpages=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@aria-controls=\"DataTables_Table_0\"]")).size();
+//	System.out.println("Totalpages :"+totalpages);
+//	
+//	List<WebElement> links=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
+//	System.out.println("Total Links:"+links.size());
+//
+//	 TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[1]"));	
+//	for(WebElement ele:TotalIds) {
+//		patient.add(ele.getText());
+//	}
+//	
+//	for(int i=0;i<totalpages;i++) {
+//		try {
+//			links.get(i).click();
+//			Thread.sleep(500);
+//			TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[1]"));
+//			for(WebElement ele:TotalIds) {
+//				patient.add(ele.getText());
+//			}
+//		} catch (IndexOutOfBoundsException e) {
+//            System.out.println("no further links");
+//            break;
+//        }
+//		
+//	}
+//	
+//	 firstCell=patient.get(0);
+//	 LastCell=patient.get(patient.size()-1);
+//	System.out.println("first cell :"+firstCell);
+//	System.out.println("last cell :"+LastCell);
+//	Collections.sort(patient);
+//	System.out.println("-----------------After sort -----------------");
+//	String firstCell1=patient.get(0);
+//	String LastCell1=patient.get(patient.size()-1);
+//	System.out.println("first cell :"+firstCell1);
+//	System.out.println("last cell :"+LastCell1);
+//	
+//	
+//	
+//	JavascriptExecutor js = (JavascriptExecutor)driver;
+//	js.executeScript("window.scrollTo(0, 0);"); 
+//	PatientIdBeforeClick.click();
+//	Thread.sleep(1000);
+//	String AfterclickFirstCell=driver.findElement(By.cssSelector("table tbody tr:first-child td:first-child")).getText();
+//	if(AfterclickFirstCell.equalsIgnoreCase(LastCell)) {
+//		System.out.println("first cell  after clcik:"+AfterclickFirstCell);
+//		flag=true;
+//	}
+//	return flag;   
+//	}
+	
+
+//	public boolean sortingPatientname_1stway() throws InterruptedException {	
+//		totalpages=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@aria-controls=\"DataTables_Table_0\"]")).size();
+//		System.out.println("Totalpages :"+totalpages);
+//		List<WebElement> links=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
+//		System.out.println("Total Links:"+links.size());
+//		 TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[2]"));	
+//		for(WebElement ele:TotalIds) {
+//			patient.add(ele.getText());
+//		}
+//		
+//		for(int i=0;i<totalpages;i++) {
+//			try {
+//				links.get(i).click();
+//				Thread.sleep(500);
+//				TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[2]"));
+//				for(WebElement ele:TotalIds) {
+//					patient.add(ele.getText());
+//				}
+//			} catch (IndexOutOfBoundsException e) {
+//	            System.out.println("no further links");
+//	            break;
+//	        }
+//			
+//		}
+//		
+//		String firstCell=patient.get(0);
+//		String LastCell=patient.get(patient.size()-1);
+//		System.out.println("first cell :"+firstCell);
+//		System.out.println("last cell :"+LastCell);
+//		Collections.sort(patient);
+//		System.out.println("-----------------After sort -----------------");
+//		firstCell=patient.get(0);
+//		LastCell=patient.get(patient.size()-1);
+//		System.out.println("first cell :"+firstCell);
+//		System.out.println("last cell :"+LastCell);
+//		JavascriptExecutor js = (JavascriptExecutor)driver;
+//		js.executeScript("window.scrollTo(0, 0);"); 
+//		PatientNameBeforeClick.click();
+//		Thread.sleep(1000);
+//		String AfterclickFirstCell=driver.findElement(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[2]")).getText();
+//		System.out.println("first cell  after clcik:"+AfterclickFirstCell);
+//		if(AfterclickFirstCell.equalsIgnoreCase(firstCell)) {
+//			System.out.println("first cell  after clcik:"+AfterclickFirstCell);
+//			flag=true;
+//		}
+//		return flag;   
+//		}
+
+	
+//	public List<List<String>> sortingPatientID_2ndway() throws InterruptedException {	
+//		
+//		int totalpages=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@aria-controls=\"DataTables_Table_0\"]")).size();
+//		System.out.println("Totalpages :"+totalpages);
+//		
+//		List<WebElement> links=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
+//		System.out.println("Total Links:"+links.size());
+//
+//		 TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[1]"));	
+//		 
+//		for(WebElement ele:TotalIds) {
+//			patient.add(ele.getText());
+//		}
+//		
+//		for(int i=0;i<totalpages;i++) {
+//			try {
+//				links.get(i).click();
+//				Thread.sleep(1000);
+//				TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[1]"));
+//				for(WebElement ele:TotalIds) {
+//					patient.add(ele.getText());
+//				}
+//			} catch (IndexOutOfBoundsException e) {
+//	            System.out.println("no further links");
+//	            break;
+//	        }
+//			
+//		}
+//		
+//		//************************* sorting through java**********************
+//			String firstCell=patient.get(0);
+//			String LastCell=patient.get(patient.size()-1);
+//			System.out.println("first cell :"+firstCell);
+//			System.out.println("last cell :"+LastCell);
+//			Collections.reverse(patient);
+//			System.out.println("-----------------After sort -----------------");
+//			firstCell=patient.get(0);
+//			LastCell=patient.get(patient.size()-1);
+//			System.out.println("first cell :"+firstCell);
+//			System.out.println("last cell :"+LastCell);
+//
+//				System.out.println("*****************sorting through java*************************");
+//				for(String data:patient) {System.out.println(data);}
+//				
+//		
+//		JavascriptExecutor js = (JavascriptExecutor)driver;
+//		js.executeScript("window.scrollTo(0, 0);"); 
+//		PatientIdBeforeClick.click();
+//		List<String> sortedArrayWithWebTable=new ArrayList<String>();
+//		Thread.sleep(500);
+//		List<WebElement> TotalIdsReverseOrder=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[1]"));
+//		 for(WebElement ele:TotalIdsReverseOrder) {
+//			 sortedArrayWithWebTable.add(ele.getText());
+//		 }
+//		List<WebElement> AfterSortlinks=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
+//		for(int i=0;i<totalpages;i++) {
+//			try {
+//				AfterSortlinks.get(i).click();
+//				Thread.sleep(1000);
+//				TotalIdsReverseOrder=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[1]"));
+//				for(WebElement ele:TotalIdsReverseOrder) {
+//					sortedArrayWithWebTable.add(ele.getText());
+//				}
+//			} catch (IndexOutOfBoundsException e) {
+//	            System.out.println("no further links");
+//	            break;
+//	        }
+//		}
+//		System.out.println("*****************sorting through Web table*************************");
+//		 for(String ele:sortedArrayWithWebTable) {System.out.println(ele);}
+//		
+//		List<List<String>> data=new ArrayList<List<String>>();
+//		data.add(patient);
+//		data.add(sortedArrayWithWebTable);
+//		System.out.println("list 1:"+data.get(0));
+//		return data;
+//		}
+	
+	public List<List<String>> sortingEachColumn(String ColumnName,int ColumnNumber) throws InterruptedException {
+		if(ColumnName.equalsIgnoreCase("patientId")) {
+			addingDataToList(ColumnNumber);
+			Collections.reverse(patient);
+			AfterSorting();
+			PatientIdBeforeClick.click();
+			data=addingSortedDataToList(ColumnNumber);	
+		}else if(ColumnName.equalsIgnoreCase("patientname")){
+			addingDataToList(ColumnNumber);
+//			Collections.sort(patient);
+			Collections.sort(patient);
+			AfterSorting();
+			PatientNameBeforeClick.click();
+			data=addingSortedDataToList(ColumnNumber);	
+		}else if(ColumnName.equalsIgnoreCase("age")){
+			addingDataToList(ColumnNumber);
+			Collections.sort(patient);
+			AfterSorting();
+			AgecolumnBeforeClick.click();
+			data=addingSortedDataToList(ColumnNumber);	
+		}else if(ColumnName.equalsIgnoreCase("gender")){
+			addingDataToList(ColumnNumber);
+			Collections.sort(patient);
+			AfterSorting();
+			GenderBeforeclick.click();
+			data=addingSortedDataToList(ColumnNumber);	
+		}else if(ColumnName.equalsIgnoreCase("phone")) {
+			addingDataToList(ColumnNumber);
+			Collections.sort(patient);
+			AfterSorting();
+			PhoneNoBeforeClick.click();
+			data=addingSortedDataToList(ColumnNumber);	
+		}else if(ColumnName.equalsIgnoreCase("GuardianName")) {
+			addingDataToList(ColumnNumber);
+			Collections.sort(patient);
+			AfterSorting();
+			GuardianNameBeforeClick.click();
+			data=addingSortedDataToList(ColumnNumber);	
+		}else if(ColumnName.equalsIgnoreCase("Address")) {
+			addingDataToList(ColumnNumber);
+			Collections.sort(patient);
+			AfterSorting();
+			AddressBeforeClick.click();
+			data=addingSortedDataToList(ColumnNumber);	
+		}
+		return data;
+	}
+	public void addingDataToList(int no) throws InterruptedException {
+		totalpages=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@aria-controls=\"DataTables_Table_0\"]")).size();
+		System.out.println("Totalpages :"+totalpages);
+		List<WebElement> links=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
+		System.out.println("Total Links:"+links.size());
+		 TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));	
+		for(WebElement ele:TotalIds) {
+			patient.add(ele.getText());
+		}
+		for(int i=0;i<totalpages;i++) {
+			try {
+				links.get(i).click();
+				Thread.sleep(3000);
+				TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));
+				for(WebElement ele:TotalIds) {
+					patient.add(ele.getText());
+				}
+			} catch (IndexOutOfBoundsException e) {
+	            System.out.println("no further links");
+	            break;
+	        }
+			
+		}
+		//************************* sorting through java**********************
+			String firstCell=patient.get(0);
+			String LastCell=patient.get(patient.size()-1);
+			System.out.println("first cell :"+firstCell);
+			System.out.println("last cell :"+LastCell);
+	}
+	public void AfterSorting() {
+		System.out.println("-----------------After sort -----------------");
+		firstCell=patient.get(0);
+		LastCell=patient.get(patient.size()-1);
+		System.out.println("first cell :"+firstCell);
+		System.out.println("last cell :"+LastCell);
+		System.out.println("*****************sorting through java*************************");
+		for(String data:patient) {System.out.println(data);}
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("window.scrollTo(0, 0);"); 
+
+	}
+	public List<List<String>> addingSortedDataToList(int no) throws InterruptedException {
+	
+	List<String> sortedArrayWithWebTable=new ArrayList<String>();
+	Thread.sleep(500);
+	List<WebElement> TotalIdsReverseOrder=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));
+	 for(WebElement ele:TotalIdsReverseOrder) {
+		 sortedArrayWithWebTable.add(ele.getText());
+	 }
+	List<WebElement> AfterSortlinks=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
+	for(int i=0;i<totalpages;i++) {
+		try {
+			AfterSortlinks.get(i).click();
+			Thread.sleep(2000);
+			TotalIdsReverseOrder=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));
+			for(WebElement ele:TotalIdsReverseOrder) {
+				sortedArrayWithWebTable.add(ele.getText());
+			}
+		} catch (IndexOutOfBoundsException e) {
+            System.out.println("no further links");
+            break;
+        }
+	}
+	System.out.println("*****************sorting through Web table*************************");
+	 for(String ele:sortedArrayWithWebTable) {System.out.println(ele);}
+	List<List<String>> data=new ArrayList<List<String>>();
+	data.add(patient);
+	data.add(sortedArrayWithWebTable);
+	System.out.println("list 1:"+data.get(0));
+	System.out.println("list 1:"+data.get(1));
+
+	return data;
+	}
+
 
 }

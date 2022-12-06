@@ -1,6 +1,7 @@
 package com.Kareclouds.Pages;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -19,11 +20,15 @@ public class GenericPage {
 	}
 	
 	public void waitForElementToAppear(WebElement ele) {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOf(ele));
 	}
+	public void waitForElementToAppear(List<WebElement> ele) {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfAllElements(ele));
+	}
 	public void waitForElementToAppear(By locator) {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 	

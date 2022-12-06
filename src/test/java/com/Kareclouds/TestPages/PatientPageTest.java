@@ -1,5 +1,7 @@
 package com.Kareclouds.TestPages;
 
+import java.util.List;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -86,4 +88,47 @@ public class PatientPageTest extends BaseTest{
 		Assert.assertEquals(result, "Operation Theatre Patient");
    }
    
+   
+   
+   //--------experiment-----------
+//   @Test()
+//   public void verifyPatientIdOrder_1stWay() throws InterruptedException {
+//	   		dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
+//	 		patient_page=dashboard_page.selectPatientLink();
+//	 		boolean result=patient_page.sortingPatientID_1stway();
+//	 		Assert.assertTrue(result);
+//   }
+//   
+//   @Test()
+//   public void verifyPatientIdOrder_2ndWay() throws InterruptedException {
+//	   		dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
+//	 		patient_page=dashboard_page.selectPatientLink();
+//	 	List<List<String>> data=patient_page.sortingPatientID_2ndway();
+//	 	Assert.assertEquals(data.get(0), data.get(1));	
+//	 	
+//	 	Assert.assertEquals(data.get(0), data.get(1));
+//   }
+//   
+//   @Test()
+//   public void verifyPatientnameOrder_1stWay() throws InterruptedException {
+//	   		dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
+//	 		patient_page=dashboard_page.selectPatientLink();
+//	 		boolean result=patient_page.sortingPatientname_1stway();
+//	 		Assert.assertTrue(result);
+//   }
+//   
+   
+   @Test()
+ public void verifyPatientnameOrder_1stWay() throws InterruptedException {
+	   		dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
+	 		patient_page=dashboard_page.selectPatientLink();
+	 		List<List<String>> result=patient_page.sortingEachColumn("patientname",2);
+	 		Assert.assertEquals(result.get(0), result.get(1));
+ }
 }
+   
+   
+   
+   
+   
+   

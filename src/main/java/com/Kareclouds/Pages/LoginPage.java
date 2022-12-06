@@ -38,7 +38,7 @@ public class LoginPage extends GenericPage {
 		UserName.sendKeys(email);
 		Password.sendKeys(pwd);
 		siginBtn.click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		DashboardPage dashboard_page = new DashboardPage(driver);
 		return dashboard_page;
 	}
