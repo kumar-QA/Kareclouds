@@ -116,7 +116,6 @@ public class PatientPageTest extends BaseTest{
 //	 		boolean result=patient_page.sortingPatientname_1stway();
 //	 		Assert.assertTrue(result);
 //   }
-//   
    
    @Test()
  public void verifyPatientnameOrder_1stWay() throws InterruptedException {
@@ -125,6 +124,17 @@ public class PatientPageTest extends BaseTest{
 	 		List<List<String>> result=patient_page.sortingEachColumn("patientname",2);
 	 		Assert.assertEquals(result.get(0), result.get(1));
  }
+   
+   
+   /*---------------------------------------Question--------------------------------------*/
+   
+   @Test()
+   public void verifyPatientnameOrder() throws InterruptedException {
+  	   		dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
+  	 		patient_page=dashboard_page.selectPatientLink();
+  	 		List<List<String>> result=patient_page.sortingPatientNameColumn();
+  	 		Assert.assertEquals(result.get(0), result.get(1));
+   }
 }
    
    

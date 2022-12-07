@@ -600,6 +600,76 @@ public class PatientPage extends GenericPage {
 
 	return data;
 	}
+/*----------------------------------Question---------------------------------------------------*/
+	
+	public List<List<String>> sortingPatientNameColumn() throws InterruptedException {	
+		totalpages=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@aria-controls=\"DataTables_Table_0\"]")).size();
+		System.out.println("Totalpages :"+totalpages);
+		List<WebElement> links=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
+		System.out.println("Total Links:"+links.size());
+		 TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[2]"));	
+		for(WebElement ele:TotalIds) {
+			patient.add(ele.getText());
+		}
+		
+		for(int i=0;i<totalpages;i++) {
+			try {
+				links.get(i).click();
+				Thread.sleep(500);
+				TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[2]"));
+				for(WebElement ele:TotalIds) {
+					patient.add(ele.getText());
+				}
+			} catch (IndexOutOfBoundsException e) {
+	            System.out.println("no further links");
+	            break;
+	        }
+			
+		}
+		
+		String firstCell=patient.get(0);
+		String LastCell=patient.get(patient.size()-1);
+		System.out.println("first cell :"+firstCell);
+		System.out.println("last cell :"+LastCell);
+		Collections.sort(patient);
+		System.out.println("-----------------After sort -----------------");
+		firstCell=patient.get(0);
+		LastCell=patient.get(patient.size()-1);
+		System.out.println("first cell :"+firstCell);
+		System.out.println("last cell :"+LastCell);
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("window.scrollTo(0, 0);"); 
+		PatientNameBeforeClick.click();
+		List<String> sortedArrayWithWebTable=new ArrayList<String>();
+		Thread.sleep(1500);
+		List<WebElement> TotalIdsReverseOrder=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[2]"));
+		 for(WebElement ele:TotalIdsReverseOrder) {
+			 sortedArrayWithWebTable.add(ele.getText());
+		 }
+		List<WebElement> AfterSortlinks=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
+		for(int i=0;i<totalpages;i++) {
+			try {
+				AfterSortlinks.get(i).click();
+				Thread.sleep(2000);
+				TotalIdsReverseOrder=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[2]"));
+				for(WebElement ele:TotalIdsReverseOrder) {
+					sortedArrayWithWebTable.add(ele.getText());
+				}
+			} catch (IndexOutOfBoundsException e) {
+	            System.out.println("no further links");
+	            break;
+	        }
+		}
+		System.out.println("*****************sorting through Web table*************************");
+		 for(String ele:sortedArrayWithWebTable) {System.out.println(ele);}
+		List<List<String>> data=new ArrayList<List<String>>();
+		data.add(patient);
+		data.add(sortedArrayWithWebTable);
+		System.out.println("list 1:"+data.get(0));
+		System.out.println("list 1:"+data.get(1));
+		return data;
+		
+	}
 
-
+	
 }
