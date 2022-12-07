@@ -5,9 +5,9 @@
     <classes>
       <class name="com.Kareclouds.TestPages.PatientPageTest">
         <methods>
-          <include name="verifyPatientnameOrder_1stWay"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
+          <include name="verifyPatientnameOrder"/>
         </methods>
       </class> <!-- com.Kareclouds.TestPages.PatientPageTest -->
     </classes>
