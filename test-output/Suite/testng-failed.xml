@@ -3,14 +3,27 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.Kareclouds.TestPages.LoginPageTest">
+      <class name="com.Kareclouds.TestPages.DashBoardTest">
         <methods>
-          <include name="verifyloginWithoutUserName"/>
+          <include name="clickAndVerifytPatientLink"/>
           <include name="launchApplication"/>
-          <include name="verifyloginWithoutPassword"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.Kareclouds.TestPages.LoginPageTest -->
+      </class> <!-- com.Kareclouds.TestPages.DashBoardTest -->
+      <class name="com.Kareclouds.TestPages.PatientPageTest">
+        <methods>
+          <include name="verifyActionColumnInTable"/>
+          <include name="VerifySearchOption"/>
+          <include name="verifySortingColumnTabel"/>
+          <include name="verifyDisabledPatientLink"/>
+          <include name="verifyActionCol_ListOpeartionTheater"/>
+          <include name="launchApplication"/>
+          <include name="verifyActionCol_ListPharamacyLink"/>
+          <include name="tearDown"/>
+          <include name="verifyActionCol_ListOPDLink"/>
+          <include name="verifyFormDetails"/>
+        </methods>
+      </class> <!-- com.Kareclouds.TestPages.PatientPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,8 +1,8 @@
 package com.Kareclouds.Pages;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -17,6 +17,13 @@ public class PatientPage extends GenericPage {
 	public WebDriver driver;
 	public String result;
 	public String order;
+	List<String> patient=new ArrayList<String>();
+	List<WebElement> TotalIds;
+	boolean flag;
+	String firstCell;
+	String LastCell;
+	int totalpages;
+	List<List<String>> data;
 
 	public PatientPage(WebDriver Driver) {
 		super(Driver);
@@ -65,6 +72,8 @@ public class PatientPage extends GenericPage {
 	WebElement DisablePatientLink;
 	
 //---------------Table Elements---------------------------
+
+	//---------------Patient id-----------------
 	
 	@FindBy(css="th[aria-label='Patient Id: activate to sort column descending']")
 	WebElement PatientIdBeforeClick;
@@ -74,11 +83,11 @@ public class PatientPage extends GenericPage {
 	WebElement PatientIdFirstCell;
 	@FindBy(css="tbody tr:last-child td:first-child")
 	WebElement PatientIdLastcell;
-	
 	//test
 	@FindBy(xpath="//table[@id='DataTables_Table_0']/tbody/tr/td[1")
 	List<WebElement> patientIdTotalCol;
 	
+	//-----------------patientName------------------
 	@FindBy(css="th[aria-label='Patient Name: activate to sort column ascending']")
 	WebElement PatientNameBeforeClick;
 	@FindBy(xpath="//th[@aria-label='Patient Name: activate to sort column descending']")
@@ -87,7 +96,7 @@ public class PatientPage extends GenericPage {
 	WebElement PatientNameFirstCell;
 	@FindBy(css="tbody tr:last-child td:nth-child(2) a")
 	WebElement PatientNameLastCell;
-	
+	//------------Age--------------------
 	@FindBy(css="th[aria-label='Age: activate to sort column ascending']")
 	WebElement AgecolumnBeforeClick;
 	@FindBy(xpath="//th[@aria-label='Age: activate to sort column descending']")
@@ -96,7 +105,7 @@ public class PatientPage extends GenericPage {
 	WebElement AgecolumnFirstCell;
 	@FindBy(css="tbody tr:last-child td:nth-child(3)")
 	WebElement AgecolumnLastCell;
-	
+	//--------Gender--------------
 	@FindBy(css="th[aria-label='Gender: activate to sort column ascending']")
 	WebElement GenderBeforeclick;
 	@FindBy(xpath="//th[@aria-label='Gender: activate to sort column descending']")
@@ -105,7 +114,7 @@ public class PatientPage extends GenericPage {
 	WebElement GenderFirstCell;
 	@FindBy(css="tbody tr:first-child td:nth-child(4)")
 	WebElement GenderAfterclickCell;
-	
+	//----------------PhoneNo-----
 	@FindBy(css="th[aria-label='Phone: activate to sort column ascending']")
 	WebElement PhoneNoBeforeClick;
 	@FindBy(xpath="//th[@aria-label='Phone: activate to sort column descending']")
@@ -115,6 +124,7 @@ public class PatientPage extends GenericPage {
 	@FindBy(css="tbody tr:first-child td:nth-child(5)")
 	WebElement PhoneNoAfterClickCell;
 	
+	//---------Guardian name--------------
 	@FindBy(css="th[aria-label='Guardian Name: activate to sort column ascending']")
 	WebElement GuardianNameBeforeClick;
 	@FindBy(xpath="//th[@aria-label='Guardian Name: activate to sort column descending']")
@@ -123,6 +133,7 @@ public class PatientPage extends GenericPage {
 	WebElement GuardaianNameFirstCell;
 	@FindBy(css="tbody tr:nth-child(2) td:nth-child(6)")
 	WebElement GuardaianNameAfterClickCell;
+	//--------Address---------
 	@FindBy(css="th[aria-label='Address: activate to sort column ascending']")
 	WebElement AddressBeforeClick;
 	@FindBy(css="th[aria-label='Address: activate to sort column descending']")
@@ -131,10 +142,15 @@ public class PatientPage extends GenericPage {
 	WebElement AddressFirstCell;
 	@FindBy(css="tbody tr:nth-child(2) td:nth-child(7)")
 	WebElement AddressAfterClickCell;
-	@FindBy(xpath="//tbody/tr[1]/td[8]/a[1]")
+	
+	//--------------Actions --details buton---------------
+	
+	@FindBy(xpath="//tbody/tr/td[8]/a[1]")
 	WebElement showBtn;
 	@FindBy(xpath="//span[@id=\"patient_name\"]")
 	WebElement pop_patientname;
+	
+	
 	@FindBy(xpath="//i[@class=\"fa fa-ellipsis-v\"]")
 	WebElement listBtn;
 	@FindBy(xpath="//ul[@role='menu']/li/a[contains(text(),'OPD')]")
@@ -154,6 +170,7 @@ public class PatientPage extends GenericPage {
 	
 	
 //--------------------------Actions-----------------------------	
+	
 	public String checkPageTitle() {
 		return PageTitle.getText();
 	}		
@@ -192,87 +209,37 @@ public class PatientPage extends GenericPage {
 		saveBtn.click();
 		return toastMsg.getText();
 	}
+	
 	public String searchOperation(String field) {
 		searchEle.sendKeys(field);
 		String data=driver.findElement(By.xpath("//td[contains(text(),"+field+")]")).getText();
 		if(data.equalsIgnoreCase(field)) {
 			result=data;
-//			checkActionColumn();
-//			checklistBtnOPD();
-//			driver.navigate().back();
-//			checklistBtnPharamacy();
-//			driver.navigate().back();
-//			checklistBtnOT();
 		}
 		return result;
 	}
+	
 	public DisabledPatientPage gotoDisabledPatientPage() {
 		DisablePatientLink.click();
 		DisabledPatientPage disabledPatient_pg=new DisabledPatientPage(driver);
 		return disabledPatient_pg;
 	}
 	
-	public String patientIdAscendingSorting(String value){
-			PatientIdBeforeClick.click();
-			if(PatientIdLastcell.getText().equalsIgnoreCase(value)) {
-				PatientIdAfterClick.click();
-				order="Ascending order";
-				}
-			return order;
-		}
-	public String checkTableColumnSorting(String Webelement,String value) {
-		if(Webelement.equalsIgnoreCase("PatientId")){
-			if(PatientIdFirstCell.getText().equalsIgnoreCase(value)) {
-				System.out.println("Beforeclick");
-				PatientIdBeforeClick.click();
-				order="Descending order";
-				}
-		}else if(Webelement.equalsIgnoreCase("PatientName")) {
-			if(PatientNameFirstCell.getText().equalsIgnoreCase(value)) {
-				System.out.println("Beforeclick");
-				PatientNameBeforeClick.click();
-				order="Descending order";
-				}
-		}else if(Webelement.equalsIgnoreCase("Age")) {
-			if(AgecolumnFirstCell.getText().equalsIgnoreCase(value)) {
-				System.out.println("Beforeclick");
-				AgecolumnBeforeClick.click();				
-				order="Descending order";
-				}
-		}else if(Webelement.equalsIgnoreCase("gender")) {
-			if(GenderFirstCell.getText().equalsIgnoreCase(value)) {
-				System.out.println("Beforeclick");
-				GenderBeforeclick.click();
-				order="Descending order";				
-				}
-		}else if(Webelement.equalsIgnoreCase("phone")) {
-			if(PhoneNoFirstCell.getText().equalsIgnoreCase(value)) {
-				System.out.println("Beforeclick");
-				PhoneNoBeforeClick.click();
-				order="Descending order";
-				}
-		}else if(Webelement.equalsIgnoreCase("guardianName")) {
-			if(GuardaianNameFirstCell.getText().equalsIgnoreCase(value)) {
-				System.out.println("Beforeclick");
-				GuardianNameBeforeClick.click();
-				System.out.println("Afterclick");
-				order="Descending order";
-				}
-		}else if(Webelement.equalsIgnoreCase("address")) {
-			if(AddressFirstCell.getText().equalsIgnoreCase(value)) {
-				AddressBeforeClick.click();
-				order="Descending order";
-				}
-		}
-		return order;
-	}
-	
-	public String checkActionColumn() {
-		showBtn.click();
+	public boolean checkActionColumn(String id,String name) throws InterruptedException {	
+		searchEle.sendKeys(id);
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//tbody/tr/td[8]/a[1]")).click();
 		waitForElementToAppear(pop_patientname);
-		return pop_patientname.getText();
+		String firstcell= pop_patientname.getText();
+		if(firstcell.equalsIgnoreCase(name)) {
+			 flag=true;
+			}
+		return flag;
+
 	}
-	
+	public void checklistBtnFunctionality() {
+		
+	}
 	public String checklistBtnOPD() {
 		listBtn.click();
 		OPDLink.click();
@@ -290,15 +257,232 @@ public class PatientPage extends GenericPage {
 		return OperationTheatreTitle.getText();
 	}
 	
+	
+
+	public List<List<String>> sortingEachColumn(String ColumnName,int ColumnNumber) throws InterruptedException {
+		if(ColumnName.equalsIgnoreCase("patientId")) {
+			addingDataToList(ColumnNumber);
+			Collections.reverse(patient);
+			AfterSorting();
+			PatientIdBeforeClick.click();
+			data=addingSortedDataToList(ColumnNumber);	
+		}else if(ColumnName.equalsIgnoreCase("patientname")){
+			addingDataToList(ColumnNumber);
+			  Collections.sort(patient, new Comparator<String>() {
+				    @Override
+				    public int compare(String s1, String s2) {
+				        return s1.compareToIgnoreCase(s2);
+				    }
+				});
+			AfterSorting();
+			PatientNameBeforeClick.click();
+			data=addingSortedDataToList(ColumnNumber);	
+		}else if(ColumnName.equalsIgnoreCase("age")){
+			addingDataToList(ColumnNumber);
+			ArrayList<String> al=new ArrayList<String>();
+			for(String d:patient) {
+		  		al.add(d.split("Y")[0]);
+//		  		String[] s=d.split("Y");
+//		  		al.add(s[0]);
+		  	}
+		   Collections.sort(al);
+		   for(String d:al) {
+			   System.out.println("data:"+d);
+		  	}
+			Collections.sort(patient);
+			AfterSorting();
+			AgecolumnBeforeClick.click();
+			data=addingSortedDataToList(ColumnNumber);	
+		}else if(ColumnName.equalsIgnoreCase("gender")){
+			addingDataToList(ColumnNumber);
+			  Collections.sort(patient, new Comparator<String>() {
+				    @Override
+				    public int compare(String s1, String s2) {
+				        return s1.compareToIgnoreCase(s2);
+				    }
+				});
+			AfterSorting();
+			GenderBeforeclick.click();
+			data=addingSortedDataToList(ColumnNumber);	
+		}else if(ColumnName.equalsIgnoreCase("phone")) {
+			addingDataToList(ColumnNumber);
+			  Collections.sort(patient, new Comparator<String>() {
+				    @Override
+				    public int compare(String s1, String s2) {
+				        return s1.compareToIgnoreCase(s2);
+				    }
+				});
+			AfterSorting();
+			PhoneNoBeforeClick.click();
+			data=addingSortedDataToList(ColumnNumber);	
+		}else if(ColumnName.equalsIgnoreCase("GuardianName")) {
+			addingDataToList(ColumnNumber);
+			  Collections.sort(patient, new Comparator<String>() {
+				    @Override
+				    public int compare(String s1, String s2) {
+				        return s1.compareToIgnoreCase(s2);
+				    }
+				});
+			AfterSorting();
+			GuardianNameBeforeClick.click();
+			data=addingSortedDataToList(ColumnNumber);	
+		}else if(ColumnName.equalsIgnoreCase("Address")) {
+			addingDataToList(ColumnNumber);
+//			Collections.sort(patient);
+			  Collections.sort(patient, new Comparator<String>() {
+				    @Override
+				    public int compare(String s1, String s2) {
+				        return s1.compareToIgnoreCase(s2);
+				    }
+				});
+			AfterSorting();
+			AddressBeforeClick.click();
+			data=addingSortedDataToList(ColumnNumber);	
+		}
+		return data;
+	}
+	
+	public void addingDataToList(int no) throws InterruptedException {
+		totalpages=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@aria-controls=\"DataTables_Table_0\"]")).size();
+		System.out.println("Totalpages :"+totalpages);
+		List<WebElement> links=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
+		System.out.println("Total Links:"+links.size());
+		 TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));	
+		for(WebElement ele:TotalIds) {
+			patient.add(ele.getText());
+		}
+		for(int i=0;i<totalpages;i++) {
+			try {
+				links.get(i).click();
+				Thread.sleep(2500);
+				
+				driver.findElement(By.xpath("//a[@class='sidebar-toggle']")).click();
+				driver.manage().window().minimize();
+				driver.manage().window().maximize();
+				TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));
+				for(WebElement ele:TotalIds) {
+					patient.add(ele.getText());
+				}
+			} catch (IndexOutOfBoundsException e) {
+	            System.out.println("no further links");
+	            break;
+	        }
+			
+		}
+		//************************* sorting through java**********************
+			String firstCell=patient.get(0);
+			String LastCell=patient.get(patient.size()-1);
+			System.out.println("first cell :"+firstCell);
+			System.out.println("last cell :"+LastCell);
+	}
+	public void AfterSorting() {
+		System.out.println("-----------------After sort -----------------");
+		firstCell=patient.get(0);
+		LastCell=patient.get(patient.size()-1);
+		System.out.println("first cell :"+firstCell);
+		System.out.println("last cell :"+LastCell);
+		System.out.println("*****************sorting through java*************************");
+		for(String data:patient) {System.out.println(data);}
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("window.scrollTo(0, 0);"); 
+
+	}
+	public List<List<String>> addingSortedDataToList(int no) throws InterruptedException {
+	
+	List<String> sortedArrayWithWebTable=new ArrayList<String>();
+	Thread.sleep(1500);
+	List<WebElement> TotalIdsReverseOrder=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));
+	 for(WebElement ele:TotalIdsReverseOrder) {
+		 sortedArrayWithWebTable.add(ele.getText());
+	 }
+	List<WebElement> AfterSortlinks=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
+	for(int i=0;i<totalpages;i++) {
+		try {
+			AfterSortlinks.get(i).click();
+			Thread.sleep(2000);
+			TotalIdsReverseOrder=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));
+			for(WebElement ele:TotalIdsReverseOrder) {
+				sortedArrayWithWebTable.add(ele.getText());
+			}
+		} catch (IndexOutOfBoundsException e) {
+            System.out.println("no further links");
+            break;
+        }
+	}
+	System.out.println("*****************sorting through Web table*************************");
+	 for(String ele:sortedArrayWithWebTable) {System.out.println(ele);}
+	List<List<String>> data=new ArrayList<List<String>>();
+	data.add(patient);
+	data.add(sortedArrayWithWebTable);
+	System.out.println("list 1:"+data.get(0));
+	System.out.println("list 1:"+data.get(1));
+
+	return data;
+	}
+
+	
+//	public String patientIdAscendingSorting(String value){
+//			PatientIdBeforeClick.click();
+//			if(PatientIdLastcell.getText().equalsIgnoreCase(value)) {
+//				PatientIdAfterClick.click();
+//				order="Ascending order";
+//				}
+//			return order;
+//		}
+	
+//	public String checkTableColumnSorting(String Webelement,String value) {
+//		if(Webelement.equalsIgnoreCase("PatientId")){
+//			if(PatientIdFirstCell.getText().equalsIgnoreCase(value)) {
+//				System.out.println("Beforeclick");
+//				PatientIdBeforeClick.click();
+//				order="Descending order";
+//				}
+//		}else if(Webelement.equalsIgnoreCase("PatientName")) {
+//			if(PatientNameFirstCell.getText().equalsIgnoreCase(value)) {
+//				System.out.println("Beforeclick");
+//				PatientNameBeforeClick.click();
+//				order="Descending order";
+//				}
+//		}else if(Webelement.equalsIgnoreCase("Age")) {
+//			if(AgecolumnFirstCell.getText().equalsIgnoreCase(value)) {
+//				System.out.println("Beforeclick");
+//				AgecolumnBeforeClick.click();				
+//				order="Descending order";
+//				}
+//		}else if(Webelement.equalsIgnoreCase("gender")) {
+//			if(GenderFirstCell.getText().equalsIgnoreCase(value)) {
+//				System.out.println("Beforeclick");
+//				GenderBeforeclick.click();
+//				order="Descending order";				
+//				}
+//		}else if(Webelement.equalsIgnoreCase("phone")) {
+//			if(PhoneNoFirstCell.getText().equalsIgnoreCase(value)) {
+//				System.out.println("Beforeclick");
+//				PhoneNoBeforeClick.click();
+//				order="Descending order";
+//				}
+//		}else if(Webelement.equalsIgnoreCase("guardianName")) {
+//			if(GuardaianNameFirstCell.getText().equalsIgnoreCase(value)) {
+//				System.out.println("Beforeclick");
+//				GuardianNameBeforeClick.click();
+//				System.out.println("Afterclick");
+//				order="Descending order";
+//				}
+//		}else if(Webelement.equalsIgnoreCase("address")) {
+//			if(AddressFirstCell.getText().equalsIgnoreCase(value)) {
+//				AddressBeforeClick.click();
+//				order="Descending order";
+//				}
+//		}
+//		return order;
+//	}
+	
+
 	//--------------------------------------------------------Best Ways for Sorting------------------------------------------------------------------------
 	
-	List<String> patient=new ArrayList<String>();
-	List<WebElement> TotalIds;
-	boolean flag;
-	String firstCell;
-	String LastCell;
-	int totalpages;
-	List<List<String>> data;
+	
+	
+	
 //	public boolean sortingPatientID_1stway() throws InterruptedException {	
 //		
 //	int totalpages=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@aria-controls=\"DataTables_Table_0\"]")).size();
@@ -480,196 +664,6 @@ public class PatientPage extends GenericPage {
 //		return data;
 //		}
 	
-	public List<List<String>> sortingEachColumn(String ColumnName,int ColumnNumber) throws InterruptedException {
-		if(ColumnName.equalsIgnoreCase("patientId")) {
-			addingDataToList(ColumnNumber);
-			Collections.reverse(patient);
-			AfterSorting();
-			PatientIdBeforeClick.click();
-			data=addingSortedDataToList(ColumnNumber);	
-		}else if(ColumnName.equalsIgnoreCase("patientname")){
-			addingDataToList(ColumnNumber);
-//			Collections.sort(patient);
-			Collections.sort(patient);
-			AfterSorting();
-			PatientNameBeforeClick.click();
-			data=addingSortedDataToList(ColumnNumber);	
-		}else if(ColumnName.equalsIgnoreCase("age")){
-			addingDataToList(ColumnNumber);
-			Collections.sort(patient);
-			AfterSorting();
-			AgecolumnBeforeClick.click();
-			data=addingSortedDataToList(ColumnNumber);	
-		}else if(ColumnName.equalsIgnoreCase("gender")){
-			addingDataToList(ColumnNumber);
-			Collections.sort(patient);
-			AfterSorting();
-			GenderBeforeclick.click();
-			data=addingSortedDataToList(ColumnNumber);	
-		}else if(ColumnName.equalsIgnoreCase("phone")) {
-			addingDataToList(ColumnNumber);
-			Collections.sort(patient);
-			AfterSorting();
-			PhoneNoBeforeClick.click();
-			data=addingSortedDataToList(ColumnNumber);	
-		}else if(ColumnName.equalsIgnoreCase("GuardianName")) {
-			addingDataToList(ColumnNumber);
-			Collections.sort(patient);
-			AfterSorting();
-			GuardianNameBeforeClick.click();
-			data=addingSortedDataToList(ColumnNumber);	
-		}else if(ColumnName.equalsIgnoreCase("Address")) {
-			addingDataToList(ColumnNumber);
-			Collections.sort(patient);
-			AfterSorting();
-			AddressBeforeClick.click();
-			data=addingSortedDataToList(ColumnNumber);	
-		}
-		return data;
-	}
-	public void addingDataToList(int no) throws InterruptedException {
-		totalpages=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@aria-controls=\"DataTables_Table_0\"]")).size();
-		System.out.println("Totalpages :"+totalpages);
-		List<WebElement> links=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
-		System.out.println("Total Links:"+links.size());
-		 TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));	
-		for(WebElement ele:TotalIds) {
-			patient.add(ele.getText());
-		}
-		for(int i=0;i<totalpages;i++) {
-			try {
-				links.get(i).click();
-				Thread.sleep(3000);
-				TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));
-				for(WebElement ele:TotalIds) {
-					patient.add(ele.getText());
-				}
-			} catch (IndexOutOfBoundsException e) {
-	            System.out.println("no further links");
-	            break;
-	        }
-			
-		}
-		//************************* sorting through java**********************
-			String firstCell=patient.get(0);
-			String LastCell=patient.get(patient.size()-1);
-			System.out.println("first cell :"+firstCell);
-			System.out.println("last cell :"+LastCell);
-	}
-	public void AfterSorting() {
-		System.out.println("-----------------After sort -----------------");
-		firstCell=patient.get(0);
-		LastCell=patient.get(patient.size()-1);
-		System.out.println("first cell :"+firstCell);
-		System.out.println("last cell :"+LastCell);
-		System.out.println("*****************sorting through java*************************");
-		for(String data:patient) {System.out.println(data);}
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("window.scrollTo(0, 0);"); 
-
-	}
-	public List<List<String>> addingSortedDataToList(int no) throws InterruptedException {
-	
-	List<String> sortedArrayWithWebTable=new ArrayList<String>();
-	Thread.sleep(500);
-	List<WebElement> TotalIdsReverseOrder=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));
-	 for(WebElement ele:TotalIdsReverseOrder) {
-		 sortedArrayWithWebTable.add(ele.getText());
-	 }
-	List<WebElement> AfterSortlinks=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
-	for(int i=0;i<totalpages;i++) {
-		try {
-			AfterSortlinks.get(i).click();
-			Thread.sleep(2000);
-			TotalIdsReverseOrder=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));
-			for(WebElement ele:TotalIdsReverseOrder) {
-				sortedArrayWithWebTable.add(ele.getText());
-			}
-		} catch (IndexOutOfBoundsException e) {
-            System.out.println("no further links");
-            break;
-        }
-	}
-	System.out.println("*****************sorting through Web table*************************");
-	 for(String ele:sortedArrayWithWebTable) {System.out.println(ele);}
-	List<List<String>> data=new ArrayList<List<String>>();
-	data.add(patient);
-	data.add(sortedArrayWithWebTable);
-	System.out.println("list 1:"+data.get(0));
-	System.out.println("list 1:"+data.get(1));
-
-	return data;
-	}
-/*----------------------------------Question---------------------------------------------------*/
-	
-	public List<List<String>> sortingPatientNameColumn() throws InterruptedException {	
-		totalpages=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@aria-controls=\"DataTables_Table_0\"]")).size();
-		System.out.println("Totalpages :"+totalpages);
-		List<WebElement> links=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
-		System.out.println("Total Links:"+links.size());
-		 TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[2]"));	
-		for(WebElement ele:TotalIds) {
-			patient.add(ele.getText());
-		}
-		
-		for(int i=0;i<totalpages;i++) {
-			try {
-				links.get(i).click();
-				Thread.sleep(500);
-				TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[2]"));
-				for(WebElement ele:TotalIds) {
-					patient.add(ele.getText());
-				}
-			} catch (IndexOutOfBoundsException e) {
-	            System.out.println("no further links");
-	            break;
-	        }
-			
-		}
-		
-		String firstCell=patient.get(0);
-		String LastCell=patient.get(patient.size()-1);
-		System.out.println("first cell :"+firstCell);
-		System.out.println("last cell :"+LastCell);
-		Collections.sort(patient);
-		System.out.println("-----------------After sort -----------------");
-		firstCell=patient.get(0);
-		LastCell=patient.get(patient.size()-1);
-		System.out.println("first cell :"+firstCell);
-		System.out.println("last cell :"+LastCell);
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("window.scrollTo(0, 0);"); 
-		PatientNameBeforeClick.click();
-		List<String> sortedArrayWithWebTable=new ArrayList<String>();
-		Thread.sleep(1500);
-		List<WebElement> TotalIdsReverseOrder=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[2]"));
-		 for(WebElement ele:TotalIdsReverseOrder) {
-			 sortedArrayWithWebTable.add(ele.getText());
-		 }
-		List<WebElement> AfterSortlinks=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
-		for(int i=0;i<totalpages;i++) {
-			try {
-				AfterSortlinks.get(i).click();
-				Thread.sleep(2000);
-				TotalIdsReverseOrder=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[2]"));
-				for(WebElement ele:TotalIdsReverseOrder) {
-					sortedArrayWithWebTable.add(ele.getText());
-				}
-			} catch (IndexOutOfBoundsException e) {
-	            System.out.println("no further links");
-	            break;
-	        }
-		}
-		System.out.println("*****************sorting through Web table*************************");
-		 for(String ele:sortedArrayWithWebTable) {System.out.println(ele);}
-		List<List<String>> data=new ArrayList<List<String>>();
-		data.add(patient);
-		data.add(sortedArrayWithWebTable);
-		System.out.println("list 1:"+data.get(0));
-		System.out.println("list 1:"+data.get(1));
-		return data;
-		
-	}
 
 	
 }

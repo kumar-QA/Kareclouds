@@ -5,6 +5,9 @@
     <classes>
       <class name="com.Kareclouds.TestPages.BaseTest"/>
       <class name="com.Kareclouds.TestPages.LoginPageTest"/>
+        <class name="com.Kareclouds.TestPages.DashBoardTest"/>
+          <class name="com.Kareclouds.TestPages.PatientPageTest"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

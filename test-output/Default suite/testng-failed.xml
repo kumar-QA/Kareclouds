@@ -7,7 +7,7 @@
         <methods>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="verifyPatientnameOrder"/>
+          <include name="verifyFormDetails"/>
         </methods>
       </class> <!-- com.Kareclouds.TestPages.PatientPageTest -->
     </classes>

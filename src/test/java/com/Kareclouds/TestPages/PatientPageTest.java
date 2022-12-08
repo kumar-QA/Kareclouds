@@ -14,23 +14,24 @@ public class PatientPageTest extends BaseTest{
 	public PatientPage patient_page;
 	public DisabledPatientPage disabledPatient_pg;
 	
-   @Test()
+   @Test()//-------From Details Functionality
    public void verifyFormDetails() throws InterruptedException {
 	   dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
 		patient_page=dashboard_page.selectPatientLink();
 		String result=patient_page.enterFormDetails("kumar", "moses","Male","March 1994","12","O+","Single","C:\\Users\\prasannakumar\\Pictures\\t.jpg","9123456795","kumar@gmail.com","Hno:12 hyderbad","nothing","No allergies");
 		Assert.assertEquals(result,"Record Saved Successfully");
+	
    }
    
-   @Test()
+   @Test()//------Search Functionality 
    public void VerifySearchOption() throws InterruptedException {
 	   dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
 		patient_page=dashboard_page.selectPatientLink();
-		String result=patient_page.searchOperation("1002");
-		Assert.assertEquals(result, "1002");
+		String result=patient_page.searchOperation("1050");
+		Assert.assertEquals(result, "1050");
    }
    
-   @Test()
+   @Test()//------------Disable Patient link Functionality
    public void verifyDisabledPatientLink() throws InterruptedException {
 	   dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
 		patient_page=dashboard_page.selectPatientLink();
@@ -38,41 +39,35 @@ public class PatientPageTest extends BaseTest{
 		String title=disabledPatient_pg.checkPageTitle();
 		Assert.assertEquals(title, "Disabled Patient List");
    }
-  
-   @Test()
-   public void verifyPatientIdAscendingOrder() throws InterruptedException {
+   
+ @Test()//---------------------Table sorting
+ public void verifySortingColumnTabel() throws InterruptedException {
 	   		dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
 	 		patient_page=dashboard_page.selectPatientLink();
-	 		String result=patient_page.patientIdAscendingSorting("1077");
-	 		System.out.println("order changed  to :"+result);
-	 		Assert.assertEquals(result, "Ascending order");
-   }
+	 		List<List<String>> result=patient_page.sortingEachColumn("patientid",1);
+	 		Assert.assertEquals(result.get(0), result.get(1));
+ }
    
-   @Test()
-   public void verifTableColumnSorting() throws InterruptedException {
-  		dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
-		patient_page=dashboard_page.selectPatientLink();
-		String result=patient_page.checkTableColumnSorting("phone","7444654641");
-		Assert.assertEquals(result, "Descending order");
-   }
+
    
-   @Test()
+   @Test()//---------------------Action column in Table
    public void verifyActionColumnInTable() throws InterruptedException {
 	   dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
 		patient_page=dashboard_page.selectPatientLink();
-		String result=patient_page.checkActionColumn();
-		Assert.assertEquals(result, "Abhijeet Sharma");
+//		patient_page.checkActionColumn();
+		boolean result=patient_page.checkActionColumn("1070","kumar");
+		Assert.assertEquals(result, true);
    }
    
-   @Test()
+   @Test()//---------------------Inside Action column OPD Link
    public void verifyActionCol_ListOPDLink() throws InterruptedException {
 	   dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
 		patient_page=dashboard_page.selectPatientLink();
 		String result=patient_page.checklistBtnOPD();
-		Assert.assertEquals(result, "Abhijeet Sharma");
+		Assert.assertEquals(result, "mohan krishna");
    }
    
-   @Test()
+   @Test()//---------------------Inside Action column PharamacyLink
    public void verifyActionCol_ListPharamacyLink() throws InterruptedException {
 	   dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
 		patient_page=dashboard_page.selectPatientLink();
@@ -80,7 +75,7 @@ public class PatientPageTest extends BaseTest{
 		Assert.assertEquals(result, "Pharmacy Bill");
    }
    
-   @Test()
+   @Test()//---------------------Inside Action column OpeartionTheater Link
    public void verifyActionCol_ListOpeartionTheater() throws InterruptedException {
 	   dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
 		patient_page=dashboard_page.selectPatientLink();
@@ -90,7 +85,26 @@ public class PatientPageTest extends BaseTest{
    
    
    
-   //--------experiment-----------
+// @Test()
+// public void verifyPatientIdAscendingOrder() throws InterruptedException {
+//	   		dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
+//	 		patient_page=dashboard_page.selectPatientLink();
+//	 		String result=patient_page.patientIdAscendingSorting("1077");
+//	 		System.out.println("order changed  to :"+result);
+//	 		Assert.assertEquals(result, "Ascending order");
+// }
+ 
+
+// @Test()
+// public void verifTableColumnSorting() throws InterruptedException {
+//		dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
+//		patient_page=dashboard_page.selectPatientLink();
+//		String result=patient_page.checkTableColumnSorting("phone","7444654641");
+//		Assert.assertEquals(result, "Descending order");
+// }
+   
+   
+   //--------Differnt ways-----------
 //   @Test()
 //   public void verifyPatientIdOrder_1stWay() throws InterruptedException {
 //	   		dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
@@ -117,24 +131,8 @@ public class PatientPageTest extends BaseTest{
 //	 		Assert.assertTrue(result);
 //   }
    
-   @Test()
- public void verifyPatientnameOrder_1stWay() throws InterruptedException {
-	   		dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
-	 		patient_page=dashboard_page.selectPatientLink();
-	 		List<List<String>> result=patient_page.sortingEachColumn("patientname",2);
-	 		Assert.assertEquals(result.get(0), result.get(1));
- }
+
    
-   
-   /*---------------------------------------Question--------------------------------------*/
-   
-   @Test()
-   public void verifyPatientnameOrder() throws InterruptedException {
-  	   		dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
-  	 		patient_page=dashboard_page.selectPatientLink();
-  	 		List<List<String>> result=patient_page.sortingPatientNameColumn();
-  	 		Assert.assertEquals(result.get(0), result.get(1));
-   }
 }
    
    
