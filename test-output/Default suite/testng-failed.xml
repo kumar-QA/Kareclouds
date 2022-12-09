@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Kareclouds.TestPages.PatientPageTest">
+      <class name="com.Kareclouds.TestPages.LoginPageTest">
         <methods>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="verifyFormDetails"/>
+          <include name="VerifyLoginFunction"/>
         </methods>
-      </class> <!-- com.Kareclouds.TestPages.PatientPageTest -->
+      </class> <!-- com.Kareclouds.TestPages.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

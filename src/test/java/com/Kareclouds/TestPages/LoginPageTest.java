@@ -1,11 +1,13 @@
 package com.Kareclouds.TestPages;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Kareclouds.Pages.DashboardPage;
 import com.Kareclouds.Pages.ForgotPage;
 
+@Listeners(com.Kareclouds.utilityFiles.ListenersPage.class)
 public class LoginPageTest extends BaseTest {
 
 	@Test()

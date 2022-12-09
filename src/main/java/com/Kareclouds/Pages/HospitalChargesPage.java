@@ -63,6 +63,7 @@ public class HospitalChargesPage extends GenericPage {
 		Description.sendKeys(des);
 		ApplyToAll.click();
 		SaveBtn.click();
+		
 		return ChargeCategoryErrorMsg.getText();
 	}
 
@@ -73,7 +74,7 @@ public class HospitalChargesPage extends GenericPage {
 	System.out.println(row);
 		int rowsize=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr")).size();
 		List<WebElement> chargecategory=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[1]"));
-		List<WebElement> ChageType=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[2]"));
+		List<WebElement> changeType=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[2]"));
 		List<WebElement> Code=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[3]"));
 		List<WebElement> standarCharges=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td[4]"));
 			for(int i=0;i<row;i++) {
