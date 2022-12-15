@@ -1,4 +1,5 @@
 package com.Kareclouds.Pages;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -8,15 +9,16 @@ import org.openqa.selenium.support.PageFactory;
 public class DashboardPage extends GenericPage{
 
 	public WebDriver driver;
-	
-	public DashboardPage(WebDriver Driver) {
+	public Logger log;
+	public DashboardPage(WebDriver Driver,Logger Log) {
 		super(Driver);
 		driver=Driver;
-		PageFactory.initElements(Driver, this);
+		this.log=Log;
+		PageFactory.initElements(driver, this);
 	}
 	
 	@FindBy(className="logo-lg")
-	WebElement log;
+	WebElement logo;
 	
 	@FindBy(xpath="//span[contains(text(),'Setup')]")
 	WebElement SetupLink;
@@ -27,25 +29,38 @@ public class DashboardPage extends GenericPage{
 	@FindBy(xpath="//a[contains(text(),'Hospital Charges')]")
 	WebElement HospitalChargesLink;
 	
+	@FindBy(xpath="//a[@href=\"http://kareclouds.com/admin/setup/bed/status\"]")
+	WebElement bedlink;
+	
+	@FindBy(xpath="//a[@href=\"http://kareclouds.com/admin/visitorspurpose\"]")
+	WebElement frontofficelink;
 	
 	
 	public boolean logCheck() {
-		return log.isDisplayed();
+		return logo.isDisplayed();
 	}
 
 	public PatientPage selectPatientLink() {
-//		Actions act=new Actions(driver);
-//		act.moveToElement(SetupLink).click().build().perform();
-//		act.moveToElement(PatientLink).click().build().perform();
 		ActionFunction(SetupLink,PatientLink);
-		PatientPage patient_page=new PatientPage(driver);
+		PatientPage patient_page=new PatientPage(driver,log);
 		return patient_page;
 	}
-	
 	public HospitalChargesPage selectHospitaltLink() {
 		ActionFunction(SetupLink,HospitalChargesLink);
-		HospitalChargesPage hospital_page=new HospitalChargesPage(driver);
+		HospitalChargesPage hospital_page=new HospitalChargesPage(driver,log);
 		return hospital_page;
+	}
+	
+	public MainBedPage selectBedLink() {
+		ActionFunction(SetupLink,bedlink);
+		MainBedPage main_bedpage=new MainBedPage(driver,log);
+		return main_bedpage;
+	}
+	
+	public FrontOfficePage selectFrontOfficeLink() {
+		ActionFunction(SetupLink,frontofficelink);
+		FrontOfficePage front_officepage=new FrontOfficePage(driver,log);
+		return front_officepage;
 	}
 	
 }

@@ -1,0 +1,623 @@
+2022-12-13T15:43:22 INFO Launch Application using driver initilization and login into the app
+2022-12-13T15:43:23 DEBUG Using Log4J2 as the default logging framework
+2022-12-13T15:43:23 DEBUG -Dio.netty.leakDetection.level: simple
+2022-12-13T15:43:23 DEBUG -Dio.netty.leakDetection.targetRecords: 4
+2022-12-13T15:43:23 DEBUG Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6aef4eb8
+2022-12-13T15:43:23 DEBUG -Dio.netty.noUnsafe: false
+2022-12-13T15:43:23 DEBUG Java version: 16
+2022-12-13T15:43:23 DEBUG sun.misc.Unsafe.theUnsafe: available
+2022-12-13T15:43:23 DEBUG sun.misc.Unsafe.copyMemory: available
+2022-12-13T15:43:23 DEBUG sun.misc.Unsafe.storeFence: available
+2022-12-13T15:43:23 DEBUG java.nio.Buffer.address: available
+2022-12-13T15:43:23 DEBUG direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:288) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:312) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:282) [netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) [netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) [netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) [netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) [netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) [netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) [netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) [async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) [async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) [async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:94) [selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) [selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:135) [selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107) [selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) [selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85) [selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:80) [selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35) [selenium-chromium-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:93) [selenium-chrome-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81) [selenium-chrome-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49) [selenium-chrome-driver-4.6.0.jar:?]
+	at com.Kareclouds.TestPages.BaseTest.driverInitilization(BaseTest.java:37) [test-classes/:?]
+	at com.Kareclouds.TestPages.BaseTest.launchApplication(BaseTest.java:57) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:816) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) [testng-7.6.1.jar:7.6.1]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:806) [testng-7.6.1.jar:7.6.1]
+	at org.testng.TestRunner.run(TestRunner.java:601) [testng-7.6.1.jar:7.6.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433) [testng-7.6.1.jar:7.6.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427) [testng-7.6.1.jar:7.6.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387) [testng-7.6.1.jar:7.6.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330) [testng-7.6.1.jar:7.6.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.6.1.jar:7.6.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.6.1.jar:7.6.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256) [testng-7.6.1.jar:7.6.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176) [testng-7.6.1.jar:7.6.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1099) [testng-7.6.1.jar:7.6.1]
+	at org.testng.TestNG.run(TestNG.java:1067) [testng-7.6.1.jar:7.6.1]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
+2022-12-13T15:43:23 DEBUG java.nio.Bits.unaligned: available, true
+2022-12-13T15:43:23 DEBUG jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @5f341870
+	at jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:385) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:687) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:559) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0$7.run(PlatformDependent0.java:410) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:312) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:401) [netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) [netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) [netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) [netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) [netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) [netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) [netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) [async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) [async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) [async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:94) [selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) [selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:135) [selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107) [selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) [selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85) [selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:80) [selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35) [selenium-chromium-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:93) [selenium-chrome-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81) [selenium-chrome-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49) [selenium-chrome-driver-4.6.0.jar:?]
+	at com.Kareclouds.TestPages.BaseTest.driverInitilization(BaseTest.java:37) [test-classes/:?]
+	at com.Kareclouds.TestPages.BaseTest.launchApplication(BaseTest.java:57) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:816) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) [testng-7.6.1.jar:7.6.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) [testng-7.6.1.jar:7.6.1]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:806) [testng-7.6.1.jar:7.6.1]
+	at org.testng.TestRunner.run(TestRunner.java:601) [testng-7.6.1.jar:7.6.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433) [testng-7.6.1.jar:7.6.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427) [testng-7.6.1.jar:7.6.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387) [testng-7.6.1.jar:7.6.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330) [testng-7.6.1.jar:7.6.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.6.1.jar:7.6.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.6.1.jar:7.6.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256) [testng-7.6.1.jar:7.6.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176) [testng-7.6.1.jar:7.6.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1099) [testng-7.6.1.jar:7.6.1]
+	at org.testng.TestNG.run(TestNG.java:1067) [testng-7.6.1.jar:7.6.1]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
+2022-12-13T15:43:23 DEBUG java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2022-12-13T15:43:23 DEBUG sun.misc.Unsafe: available
+2022-12-13T15:43:23 DEBUG maxDirectMemory: 1048576000 bytes (maybe)
+2022-12-13T15:43:23 DEBUG -Dio.netty.tmpdir: C:\Users\PRASAN~1\AppData\Local\Temp (java.io.tmpdir)
+2022-12-13T15:43:23 DEBUG -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-12-13T15:43:23 DEBUG Platform: Windows
+2022-12-13T15:43:23 DEBUG -Dio.netty.maxDirectMemory: -1 bytes
+2022-12-13T15:43:23 DEBUG -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-12-13T15:43:23 DEBUG java.nio.ByteBuffer.cleaner(): available
+2022-12-13T15:43:23 DEBUG -Dio.netty.noPreferDirect: false
+2022-12-13T15:43:23 DEBUG org.jctools-core.MpscChunkedArrayQueue: available
+2022-12-13T15:43:23 DEBUG -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-12-13T15:43:23 DEBUG -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-12-13T15:43:23 DEBUG Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+2022-12-13T15:43:23 DEBUG Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+2022-12-13T15:43:23 DEBUG -Dio.netty.eventLoopThreads: 8
+2022-12-13T15:43:23 DEBUG -Dio.netty.noKeySetOptimization: false
+2022-12-13T15:43:23 DEBUG -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-12-13T15:43:23 TRACE instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@57c47a9e
+2022-12-13T15:43:23 TRACE instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2d9f64c9
+2022-12-13T15:43:23 TRACE instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@21ac5eb4
+2022-12-13T15:43:23 TRACE instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@52d6cd34
+2022-12-13T15:43:23 TRACE instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@715d6168
+2022-12-13T15:43:23 TRACE instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@27b2faa6
+2022-12-13T15:43:23 TRACE instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@6428591a
+2022-12-13T15:43:23 TRACE instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@7397c6
+2022-12-13T15:43:23 DEBUG -Dio.netty.allocator.numHeapArenas: 8
+2022-12-13T15:43:23 DEBUG -Dio.netty.allocator.numDirectArenas: 8
+2022-12-13T15:43:23 DEBUG -Dio.netty.allocator.pageSize: 8192
+2022-12-13T15:43:23 DEBUG -Dio.netty.allocator.maxOrder: 9
+2022-12-13T15:43:23 DEBUG -Dio.netty.allocator.chunkSize: 4194304
+2022-12-13T15:43:23 DEBUG -Dio.netty.allocator.smallCacheSize: 256
+2022-12-13T15:43:23 DEBUG -Dio.netty.allocator.normalCacheSize: 64
+2022-12-13T15:43:23 DEBUG -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-12-13T15:43:23 DEBUG -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-12-13T15:43:23 DEBUG -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-12-13T15:43:23 DEBUG -Dio.netty.allocator.useCacheForAllThreads: false
+2022-12-13T15:43:23 DEBUG -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-12-13T15:43:23 DEBUG -Dio.netty.allocator.type: pooled
+2022-12-13T15:43:23 DEBUG -Dio.netty.threadLocalDirectBufferSize: 0
+2022-12-13T15:43:23 DEBUG -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-12-13T15:43:24 DEBUG -Dio.netty.processId: 7976 (auto-detected)
+2022-12-13T15:43:24 DEBUG -Djava.net.preferIPv4Stack: false
+2022-12-13T15:43:24 DEBUG -Djava.net.preferIPv6Addresses: false
+2022-12-13T15:43:24 DEBUG Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-12-13T15:43:24 DEBUG Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-12-13T15:43:24 DEBUG -Dio.netty.machineId: a4:17:31:ff:fe:2c:b3:b3 (auto-detected)
+2022-12-13T15:43:24 DEBUG -Dio.netty.buffer.checkAccessible: true
+2022-12-13T15:43:24 DEBUG -Dio.netty.buffer.checkBounds: true
+2022-12-13T15:43:24 DEBUG Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@316274e1
+2022-12-13T15:43:24 DEBUG -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-12-13T15:43:24 DEBUG -Dio.netty.recycler.ratio: 8
+2022-12-13T15:43:24 DEBUG -Dio.netty.recycler.chunkSize: 32
+2022-12-13T15:43:24 DEBUG -Dio.netty.recycler.blocking: false
+2022-12-13T15:43:25 DEBUG brotli4j not in the classpath; Brotli support will be unavailable.
+2022-12-13T15:43:25 DEBUG -Dio.netty.initialSeedUniquifier: 0x578c9d2c09617b9c
+2022-12-13T15:43:28 INFO going to enter url 
+2022-12-13T15:43:30 INFO Login page object returned
+2022-12-13T15:43:30 INFO Verify login function method started in testpage
+2022-12-13T15:43:30 INFO loginWithValidCredentials function started 
+2022-12-13T15:43:41 INFO Creating DashBoard  page object 
+2022-12-13T15:43:41 INFO returning Dashboard page object
+2022-12-13T15:43:42 INFO Is log is displayed true
+2022-12-13T15:43:42 INFO Close driver
+2022-12-13T15:45:04 INFO Launch Application using driver initilization and login into the app
+2022-12-13T15:45:09 INFO going to enter url 
+2022-12-13T15:45:11 INFO Login page object returned
+2022-12-13T15:45:11 INFO Verify login function method started in testpage
+2022-12-13T15:45:11 INFO loginWithValidCredentials function started 
+2022-12-13T15:45:28 INFO Creating DashBoard  page object 
+2022-12-13T15:45:28 INFO returning Dashboard page object
+2022-12-13T15:45:28 INFO Is log is displayed true
+2022-12-13T15:45:28 INFO Close driver
+2022-12-13T16:00:08 INFO Launch Application using driver initilization and login into the app
+2022-12-13T16:00:24 INFO going to enter url 
+2022-12-13T16:00:26 INFO Login page object returned
+2022-12-13T16:00:26 INFO loginWithValidCredentials function started 
+2022-12-13T16:00:37 INFO Creating DashBoard  page object 
+2022-12-13T16:00:37 INFO returning Dashboard page object
+2022-12-13T16:00:48 INFO Close driver
+2022-12-13T16:02:51 INFO Launch Application using driver initilization and login into the app
+2022-12-13T16:02:57 INFO going to enter url 
+2022-12-13T16:03:00 INFO Login page object returned
+2022-12-13T16:03:00 INFO loginWithValidCredentials function started 
+2022-12-13T16:03:14 INFO Creating DashBoard  page object 
+2022-12-13T16:03:14 INFO returning Dashboard page object
+2022-12-13T16:03:25 INFO Close driver
+2022-12-13T16:03:44 INFO Launch Application using driver initilization and login into the app
+2022-12-13T16:03:50 INFO going to enter url 
+2022-12-13T16:03:52 INFO Login page object returned
+2022-12-13T16:03:52 INFO loginWithValidCredentials function started 
+2022-12-13T16:04:04 INFO Creating DashBoard  page object 
+2022-12-13T16:04:04 INFO returning Dashboard page object
+2022-12-13T16:04:15 INFO Close driver
+2022-12-13T16:05:33 INFO Launch Application using driver initilization and login into the app
+2022-12-13T16:05:40 INFO going to enter url 
+2022-12-13T16:05:42 INFO Login page object returned
+2022-12-13T16:05:42 INFO loginWithValidCredentials function started 
+2022-12-13T16:05:55 INFO Creating DashBoard  page object 
+2022-12-13T16:05:55 INFO returning Dashboard page object
+2022-12-13T16:06:06 INFO Close driver
+2022-12-13T16:23:09 INFO Launch Application using driver initilization and login into the app
+2022-12-13T16:23:23 INFO going to enter url 
+2022-12-13T16:23:28 INFO Login page object returned
+2022-12-13T16:23:28 INFO loginWithValidCredentials function started 
+2022-12-13T16:23:40 INFO Creating DashBoard  page object 
+2022-12-13T16:23:40 INFO returning Dashboard page object
+2022-12-13T16:23:53 INFO Close driver
+2022-12-13T16:25:31 INFO Launch Application using driver initilization and login into the app
+2022-12-13T16:25:39 INFO going to enter url 
+2022-12-13T16:25:41 INFO Login page object returned
+2022-12-13T16:25:41 INFO loginWithValidCredentials function started 
+2022-12-13T16:25:53 INFO Creating DashBoard  page object 
+2022-12-13T16:25:53 INFO returning Dashboard page object
+2022-12-13T16:25:58 INFO Close driver
+2022-12-13T16:41:20 INFO Launch Application using driver initilization and login into the app
+2022-12-13T16:41:27 INFO going to enter url 
+2022-12-13T16:41:30 INFO Login page object returned
+2022-12-13T16:41:30 INFO Close driver
+2022-12-13T16:42:41 INFO Launch Application using driver initilization and login into the app
+2022-12-13T16:42:47 INFO going to enter url 
+2022-12-13T16:42:50 INFO Login page object returned
+2022-12-13T16:42:50 INFO Close driver
+2022-12-13T16:43:28 INFO Launch Application using driver initilization and login into the app
+2022-12-13T16:43:34 INFO going to enter url 
+2022-12-13T16:43:36 INFO Login page object returned
+2022-12-13T16:43:36 INFO loginWithValidCredentials function started 
+2022-12-13T16:43:47 INFO Creating DashBoard  page object 
+2022-12-13T16:43:47 INFO returning Dashboard page object
+2022-12-13T16:43:52 INFO clicked on the linkNo 0
+2022-12-13T16:43:57 INFO Close driver
+2022-12-13T16:47:14 INFO Launch Application using driver initilization and login into the app
+2022-12-13T16:47:23 INFO going to enter url 
+2022-12-13T16:47:28 INFO Login page object returned
+2022-12-13T16:47:28 INFO loginWithValidCredentials function started 
+2022-12-13T16:47:47 INFO Creating DashBoard  page object 
+2022-12-13T16:47:47 INFO returning Dashboard page object
+2022-12-13T16:47:52 INFO clicked on the linkNo 1
+2022-12-13T16:48:10 INFO Close driver
+2022-12-13T16:50:06 INFO Launch Application using driver initilization and login into the app
+2022-12-13T16:50:13 INFO going to enter url 
+2022-12-13T16:50:17 INFO Login page object returned
+2022-12-13T16:50:17 INFO loginWithValidCredentials function started 
+2022-12-13T16:50:27 INFO Creating DashBoard  page object 
+2022-12-13T16:50:27 INFO returning Dashboard page object
+2022-12-13T16:50:32 INFO clicked on the linkNo 1
+2022-12-13T16:50:49 INFO Close driver
+2022-12-13T17:01:32 INFO Launch Application using driver initilization and login into the app
+2022-12-13T17:01:48 INFO going to enter url 
+2022-12-13T17:01:50 INFO Login page object returned
+2022-12-13T17:01:50 INFO loginWithValidCredentials function started 
+2022-12-13T17:02:03 INFO Creating DashBoard  page object 
+2022-12-13T17:02:03 INFO returning Dashboard page object
+2022-12-13T17:02:08 INFO clicked on the linkNo 1
+2022-12-13T17:02:25 INFO Close driver
+2022-12-13T17:05:47 INFO Launch Application using driver initilization and login into the app
+2022-12-13T17:05:53 INFO going to enter url 
+2022-12-13T17:05:55 INFO Login page object returned
+2022-12-13T17:05:55 INFO loginWithValidCredentials function started 
+2022-12-13T17:06:07 INFO Creating DashBoard  page object 
+2022-12-13T17:06:07 INFO returning Dashboard page object
+2022-12-13T17:06:12 INFO clicked on the linkNo 1
+2022-12-13T17:06:21 INFO Close driver
+2022-12-13T17:06:52 INFO Launch Application using driver initilization and login into the app
+2022-12-13T17:06:57 INFO going to enter url 
+2022-12-13T17:06:59 INFO Login page object returned
+2022-12-13T17:06:59 INFO loginWithValidCredentials function started 
+2022-12-13T17:07:11 INFO Creating DashBoard  page object 
+2022-12-13T17:07:11 INFO returning Dashboard page object
+2022-12-13T17:07:16 INFO clicked on the linkNo 0
+2022-12-13T17:07:21 INFO Close driver
+2022-12-13T17:08:56 INFO Launch Application using driver initilization and login into the app
+2022-12-13T17:09:03 INFO going to enter url 
+2022-12-13T17:09:08 INFO Login page object returned
+2022-12-13T17:09:08 INFO loginWithValidCredentials function started 
+2022-12-13T17:09:26 INFO Creating DashBoard  page object 
+2022-12-13T17:09:26 INFO returning Dashboard page object
+2022-12-13T17:09:31 INFO clicked on the linkNo 1
+2022-12-13T17:09:41 INFO Close driver
+2022-12-13T17:15:48 INFO Launch Application using driver initilization and login into the app
+2022-12-13T17:16:03 INFO going to enter url 
+2022-12-13T17:16:09 INFO Login page object returned
+2022-12-13T17:16:09 INFO loginWithValidCredentials function started 
+2022-12-13T17:16:26 INFO Creating DashBoard  page object 
+2022-12-13T17:16:26 INFO returning Dashboard page object
+2022-12-13T17:16:32 INFO clicked on the linkNo 1
+2022-12-13T17:16:42 INFO Close driver
+2022-12-13T17:39:53 INFO Launch Application using driver initilization and login into the app
+2022-12-13T17:40:01 INFO going to enter url 
+2022-12-13T17:40:03 INFO Login page object returned
+2022-12-13T17:40:03 INFO loginWithValidCredentials function started 
+2022-12-13T17:40:17 INFO Creating DashBoard  page object 
+2022-12-13T17:40:17 INFO returning Dashboard page object
+2022-12-13T17:40:22 INFO clicked on the linkNo 1
+2022-12-13T17:40:28 INFO clicked on the linkNo 2
+2022-12-13T17:40:51 INFO Close driver
+2022-12-13T17:47:18 INFO Launch Application using driver initilization and login into the app
+2022-12-13T17:47:23 INFO going to enter url 
+2022-12-13T17:47:26 INFO Login page object returned
+2022-12-13T17:47:26 INFO loginWithValidCredentials function started 
+2022-12-13T17:47:38 INFO Creating DashBoard  page object 
+2022-12-13T17:47:38 INFO returning Dashboard page object
+2022-12-13T17:47:43 INFO clicked on the linkNo 0
+2022-12-13T17:47:48 INFO clicked on the linkNo 1
+2022-12-13T17:48:11 INFO Close driver
+2022-12-13T17:52:37 INFO Launch Application using driver initilization and login into the app
+2022-12-13T17:52:43 INFO going to enter url 
+2022-12-13T17:52:46 INFO Login page object returned
+2022-12-13T17:52:46 INFO loginWithValidCredentials function started 
+2022-12-13T17:53:04 INFO Creating DashBoard  page object 
+2022-12-13T17:53:04 INFO returning Dashboard page object
+2022-12-13T17:53:08 INFO clicked on the linkNo 0
+2022-12-13T17:53:14 INFO clicked on the linkNo 1
+2022-12-13T17:53:28 INFO Close driver
+2022-12-13T17:57:06 INFO Launch Application using driver initilization and login into the app
+2022-12-13T17:57:13 INFO going to enter url 
+2022-12-13T17:57:20 INFO Login page object returned
+2022-12-13T17:57:20 INFO loginWithValidCredentials function started 
+2022-12-13T17:57:33 INFO Creating DashBoard  page object 
+2022-12-13T17:57:33 INFO returning Dashboard page object
+2022-12-13T17:57:38 INFO clicked on the linkNo 0
+2022-12-13T17:57:43 INFO clicked on the linkNo 1
+2022-12-13T17:57:57 INFO Close driver
+2022-12-13T18:02:02 INFO Launch Application using driver initilization and login into the app
+2022-12-13T18:02:15 INFO going to enter url 
+2022-12-13T18:02:18 INFO Login page object returned
+2022-12-13T18:02:18 INFO loginWithValidCredentials function started 
+2022-12-13T18:02:28 INFO Creating DashBoard  page object 
+2022-12-13T18:02:28 INFO returning Dashboard page object
+2022-12-13T18:02:33 INFO clicked on the linkNo 0
+2022-12-13T18:02:39 INFO clicked on the linkNo 1
+2022-12-13T18:02:52 INFO Close driver
+2022-12-13T18:13:36 INFO Launch Application using driver initilization and login into the app
+2022-12-13T18:13:42 INFO going to enter url 
+2022-12-13T18:13:44 INFO Login page object returned
+2022-12-13T18:13:44 INFO Verify login function method started in testpage
+2022-12-13T18:13:44 INFO loginWithValidCredentials function started 
+2022-12-13T18:13:55 INFO Creating DashBoard  page object 
+2022-12-13T18:13:55 INFO returning Dashboard page object
+2022-12-13T18:13:55 INFO Is log is displayed true
+2022-12-13T18:13:55 INFO Close driver
+2022-12-13T18:15:06 INFO Launch Application using driver initilization and login into the app
+2022-12-13T18:15:11 INFO going to enter url 
+2022-12-13T18:15:14 INFO Login page object returned
+2022-12-13T18:15:14 INFO verifyEmptyUserNameField method calling
+2022-12-13T18:15:14 INFO Close driver
+2022-12-13T18:15:53 INFO Launch Application using driver initilization and login into the app
+2022-12-13T18:15:59 INFO going to enter url 
+2022-12-13T18:15:59 INFO Close driver
+2022-12-13T18:16:14 INFO Launch Application using driver initilization and login into the app
+2022-12-13T18:16:20 INFO going to enter url 
+2022-12-13T18:16:20 INFO Close driver
+2022-12-13T18:16:51 INFO Launch Application using driver initilization and login into the app
+2022-12-13T18:16:56 INFO going to enter url 
+2022-12-13T18:16:58 INFO Login page object returned
+2022-12-13T18:16:58 INFO Verify login function method started in testpage
+2022-12-13T18:16:58 INFO loginWithValidCredentials function started 
+2022-12-13T18:17:09 INFO Creating DashBoard  page object 
+2022-12-13T18:17:09 INFO returning Dashboard page object
+2022-12-13T18:17:09 INFO Is log is displayed true
+2022-12-13T18:17:09 INFO Close driver
+2022-12-13T18:17:37 INFO Launch Application using driver initilization and login into the app
+2022-12-13T18:17:42 INFO going to enter url 
+2022-12-13T18:17:44 INFO Login page object returned
+2022-12-13T18:17:44 INFO verifyEmptyUserNameField method calling
+2022-12-13T18:17:45 INFO Close driver
+2022-12-15T11:49:41 INFO Launch Application using driver initilization and login into the app
+2022-12-15T11:50:14 INFO going to enter url 
+2022-12-15T11:50:24 INFO Login page object returned
+2022-12-15T11:50:24 INFO loginWithValidCredentials function started 
+2022-12-15T11:50:37 INFO Creating DashBoard  page object 
+2022-12-15T11:50:37 INFO returning Dashboard page object
+2022-12-15T11:50:42 INFO Close driver
+2022-12-15T11:53:01 INFO Launch Application using driver initilization and login into the app
+2022-12-15T11:53:07 INFO going to enter url 
+2022-12-15T11:53:09 INFO Login page object returned
+2022-12-15T11:53:09 INFO loginWithValidCredentials function started 
+2022-12-15T11:53:25 INFO Creating DashBoard  page object 
+2022-12-15T11:53:25 INFO returning Dashboard page object
+2022-12-15T11:53:49 INFO Close driver
+2022-12-15T12:04:46 INFO Launch Application using driver initilization and login into the app
+2022-12-15T12:04:52 INFO going to enter url 
+2022-12-15T12:04:55 INFO Login page object returned
+2022-12-15T12:04:55 INFO loginWithValidCredentials function started 
+2022-12-15T12:05:13 INFO Creating DashBoard  page object 
+2022-12-15T12:05:13 INFO returning Dashboard page object
+2022-12-15T12:05:38 INFO Close driver
+2022-12-15T12:16:45 INFO Launch Application using driver initilization and login into the app
+2022-12-15T12:16:51 INFO going to enter url 
+2022-12-15T12:16:52 INFO Login page object returned
+2022-12-15T12:16:52 INFO loginWithValidCredentials function started 
+2022-12-15T12:17:07 INFO Creating DashBoard  page object 
+2022-12-15T12:17:07 INFO returning Dashboard page object
+2022-12-15T12:17:12 INFO Close driver
+2022-12-15T12:18:38 INFO Launch Application using driver initilization and login into the app
+2022-12-15T12:18:43 INFO going to enter url 
+2022-12-15T12:18:45 INFO Login page object returned
+2022-12-15T12:18:45 INFO loginWithValidCredentials function started 
+2022-12-15T12:18:57 INFO Creating DashBoard  page object 
+2022-12-15T12:18:57 INFO returning Dashboard page object
+2022-12-15T12:19:01 INFO Close driver
+2022-12-15T12:19:41 INFO Launch Application using driver initilization and login into the app
+2022-12-15T12:19:46 INFO going to enter url 
+2022-12-15T12:19:49 INFO Login page object returned
+2022-12-15T12:19:49 INFO loginWithValidCredentials function started 
+2022-12-15T12:20:00 INFO Creating DashBoard  page object 
+2022-12-15T12:20:00 INFO returning Dashboard page object
+2022-12-15T12:20:14 INFO Close driver
+2022-12-15T13:03:00 INFO Launch Application using driver initilization and login into the app
+2022-12-15T13:03:14 INFO going to enter url 
+2022-12-15T13:03:20 INFO Login page object returned
+2022-12-15T13:03:20 INFO loginWithValidCredentials function started 
+2022-12-15T13:03:38 INFO Creating DashBoard  page object 
+2022-12-15T13:03:38 INFO returning Dashboard page object
+2022-12-15T13:03:43 INFO Close driver
+2022-12-15T13:04:43 INFO Launch Application using driver initilization and login into the app
+2022-12-15T13:04:48 INFO going to enter url 
+2022-12-15T13:04:50 INFO Login page object returned
+2022-12-15T13:04:50 INFO loginWithValidCredentials function started 
+2022-12-15T13:05:04 INFO Creating DashBoard  page object 
+2022-12-15T13:05:04 INFO returning Dashboard page object
+2022-12-15T13:05:10 INFO Close driver
+2022-12-15T13:12:59 INFO Launch Application using driver initilization and login into the app
+2022-12-15T13:13:06 INFO going to enter url 
+2022-12-15T13:13:09 INFO Login page object returned
+2022-12-15T13:13:09 INFO loginWithValidCredentials function started 
+2022-12-15T13:13:29 INFO Close driver
+2022-12-15T13:13:48 INFO Launch Application using driver initilization and login into the app
+2022-12-15T13:13:57 INFO going to enter url 
+2022-12-15T13:14:02 INFO Login page object returned
+2022-12-15T13:14:02 INFO loginWithValidCredentials function started 
+2022-12-15T13:14:23 INFO Close driver
+2022-12-15T13:14:52 INFO Launch Application using driver initilization and login into the app
+2022-12-15T13:14:58 INFO going to enter url 
+2022-12-15T13:15:01 INFO Login page object returned
+2022-12-15T13:15:01 INFO loginWithValidCredentials function started 
+2022-12-15T13:15:18 INFO Creating DashBoard  page object 
+2022-12-15T13:15:18 INFO returning Dashboard page object
+2022-12-15T13:15:22 INFO Close driver
+2022-12-15T13:15:46 INFO Launch Application using driver initilization and login into the app
+2022-12-15T13:15:52 INFO going to enter url 
+2022-12-15T13:15:56 INFO Login page object returned
+2022-12-15T13:15:56 INFO loginWithValidCredentials function started 
+2022-12-15T13:16:18 INFO Creating DashBoard  page object 
+2022-12-15T13:16:18 INFO returning Dashboard page object
+2022-12-15T13:16:33 INFO Close driver
+2022-12-15T14:47:20 INFO Launch Application using driver initilization and login into the app
+2022-12-15T14:48:22 INFO going to enter url 
+2022-12-15T14:48:24 INFO Login page object returned
+2022-12-15T14:48:24 INFO loginWithValidCredentials function started 
+2022-12-15T14:48:37 INFO Creating DashBoard  page object 
+2022-12-15T14:48:37 INFO returning Dashboard page object
+2022-12-15T14:48:42 INFO Close driver
+2022-12-15T14:57:55 INFO Launch Application using driver initilization and login into the app
+2022-12-15T14:58:01 INFO going to enter url 
+2022-12-15T14:58:03 INFO Login page object returned
+2022-12-15T14:58:03 INFO loginWithValidCredentials function started 
+2022-12-15T14:58:19 INFO Creating DashBoard  page object 
+2022-12-15T14:58:19 INFO returning Dashboard page object
+2022-12-15T14:58:22 INFO Close driver
+2022-12-15T15:22:03 INFO Launch Application using driver initilization and login into the app
+2022-12-15T15:22:08 INFO going to enter url 
+2022-12-15T15:22:10 INFO Login page object returned
+2022-12-15T15:22:10 INFO loginWithValidCredentials function started 
+2022-12-15T15:22:28 INFO Creating DashBoard  page object 
+2022-12-15T15:22:28 INFO returning Dashboard page object
+2022-12-15T15:22:30 INFO Close driver
+2022-12-15T15:25:21 INFO Launch Application using driver initilization and login into the app
+2022-12-15T15:25:27 INFO going to enter url 
+2022-12-15T15:25:29 INFO Login page object returned
+2022-12-15T15:25:29 INFO loginWithValidCredentials function started 
+2022-12-15T15:25:40 INFO Creating DashBoard  page object 
+2022-12-15T15:25:40 INFO returning Dashboard page object
+2022-12-15T15:25:42 INFO Close driver
+2022-12-15T15:26:48 INFO Launch Application using driver initilization and login into the app
+2022-12-15T15:26:53 INFO going to enter url 
+2022-12-15T15:26:56 INFO Login page object returned
+2022-12-15T15:26:56 INFO loginWithValidCredentials function started 
+2022-12-15T15:27:17 INFO Creating DashBoard  page object 
+2022-12-15T15:27:17 INFO returning Dashboard page object
+2022-12-15T15:27:28 INFO Close driver
+2022-12-15T15:28:18 INFO Launch Application using driver initilization and login into the app
+2022-12-15T15:28:19 INFO Launch Application using driver initilization and login into the app
+2022-12-15T15:28:29 INFO going to enter url 
+2022-12-15T15:28:30 INFO going to enter url 
+2022-12-15T15:28:34 INFO Login page object returned
+2022-12-15T15:28:34 INFO loginWithValidCredentials function started 
+2022-12-15T15:28:37 INFO Login page object returned
+2022-12-15T15:28:37 INFO loginWithValidCredentials function started 
+2022-12-15T15:28:57 INFO Creating DashBoard  page object 
+2022-12-15T15:28:57 INFO returning Dashboard page object
+2022-12-15T15:28:58 INFO Creating DashBoard  page object 
+2022-12-15T15:28:58 INFO returning Dashboard page object
+2022-12-15T15:29:07 INFO Close driver
+2022-12-15T15:29:08 INFO Close driver
+2022-12-15T15:34:32 INFO Launch Application using driver initilization and login into the app
+2022-12-15T15:34:38 INFO going to enter url 
+2022-12-15T15:34:41 INFO Login page object returned
+2022-12-15T15:34:41 INFO loginWithValidCredentials function started 
+2022-12-15T15:34:59 INFO Creating DashBoard  page object 
+2022-12-15T15:34:59 INFO returning Dashboard page object
+2022-12-15T15:35:10 INFO Close driver
+2022-12-15T15:40:21 INFO Launch Application using driver initilization and login into the app
+2022-12-15T15:40:27 INFO going to enter url 
+2022-12-15T15:40:29 INFO Login page object returned
+2022-12-15T15:40:29 INFO loginWithValidCredentials function started 
+2022-12-15T15:40:40 INFO Creating DashBoard  page object 
+2022-12-15T15:40:40 INFO returning Dashboard page object
+2022-12-15T15:40:43 INFO Close driver
+2022-12-15T15:40:52 INFO Launch Application using driver initilization and login into the app
+2022-12-15T15:40:57 INFO going to enter url 
+2022-12-15T15:41:00 INFO Login page object returned
+2022-12-15T15:41:00 INFO loginWithValidCredentials function started 
+2022-12-15T15:41:18 INFO Creating DashBoard  page object 
+2022-12-15T15:41:18 INFO returning Dashboard page object
+2022-12-15T15:41:20 INFO Close driver
+2022-12-15T16:54:25 INFO Launch Application using driver initilization and login into the app
+2022-12-15T16:54:47 INFO going to enter url 
+2022-12-15T16:54:51 INFO Login page object returned
+2022-12-15T16:54:51 INFO loginWithValidCredentials function started 
+2022-12-15T16:55:13 INFO Creating DashBoard  page object 
+2022-12-15T16:55:13 INFO returning Dashboard page object
+2022-12-15T16:55:22 INFO Close driver
+2022-12-15T16:55:26 INFO Launch Application using driver initilization and login into the app
+2022-12-15T16:55:30 INFO going to enter url 
+2022-12-15T16:55:35 INFO Login page object returned
+2022-12-15T16:55:35 INFO loginWithValidCredentials function started 
+2022-12-15T16:55:56 INFO Close driver
+2022-12-15T16:55:56 INFO Launch Application using driver initilization and login into the app
+2022-12-15T16:56:01 INFO going to enter url 
+2022-12-15T16:56:08 INFO Login page object returned
+2022-12-15T16:56:08 INFO loginWithValidCredentials function started 
+2022-12-15T16:56:29 INFO Close driver
+2022-12-15T16:56:30 INFO Launch Application using driver initilization and login into the app
+2022-12-15T16:56:37 INFO going to enter url 
+2022-12-15T16:56:43 INFO Login page object returned
+2022-12-15T16:56:43 INFO loginWithValidCredentials function started 
+2022-12-15T16:57:01 INFO Creating DashBoard  page object 
+2022-12-15T16:57:01 INFO returning Dashboard page object
+2022-12-15T16:57:11 INFO Close driver
+2022-12-15T16:58:14 INFO Launch Application using driver initilization and login into the app
+2022-12-15T16:58:19 INFO going to enter url 
+2022-12-15T16:58:21 INFO Login page object returned
+2022-12-15T16:58:21 INFO loginWithValidCredentials function started 
+2022-12-15T16:58:32 INFO Creating DashBoard  page object 
+2022-12-15T16:58:32 INFO returning Dashboard page object
+2022-12-15T16:58:35 INFO Close driver
+2022-12-15T16:58:45 INFO Launch Application using driver initilization and login into the app
+2022-12-15T16:58:50 INFO going to enter url 
+2022-12-15T16:58:52 INFO Login page object returned
+2022-12-15T16:58:52 INFO loginWithValidCredentials function started 
+2022-12-15T16:59:04 INFO Creating DashBoard  page object 
+2022-12-15T16:59:04 INFO returning Dashboard page object
+2022-12-15T16:59:08 INFO Close driver
+2022-12-15T16:59:17 INFO Launch Application using driver initilization and login into the app
+2022-12-15T16:59:22 INFO going to enter url 
+2022-12-15T16:59:24 INFO Login page object returned
+2022-12-15T16:59:24 INFO loginWithValidCredentials function started 
+2022-12-15T16:59:35 INFO Creating DashBoard  page object 
+2022-12-15T16:59:35 INFO returning Dashboard page object
+2022-12-15T16:59:40 INFO Close driver
+2022-12-15T16:59:48 INFO Launch Application using driver initilization and login into the app
+2022-12-15T16:59:54 INFO going to enter url 
+2022-12-15T16:59:58 INFO Login page object returned
+2022-12-15T16:59:58 INFO loginWithValidCredentials function started 
+2022-12-15T17:00:13 INFO Creating DashBoard  page object 
+2022-12-15T17:00:13 INFO returning Dashboard page object
+2022-12-15T17:00:18 INFO Close driver
+2022-12-15T17:32:23 INFO Launch Application using driver initilization and login into the app
+2022-12-15T17:32:30 INFO going to enter url 
+2022-12-15T17:32:34 INFO Login page object returned
+2022-12-15T17:32:34 INFO loginWithValidCredentials function started 
+2022-12-15T17:32:50 INFO Creating DashBoard  page object 
+2022-12-15T17:32:50 INFO returning Dashboard page object
+2022-12-15T17:32:53 INFO Close driver
+2022-12-15T17:32:58 INFO Launch Application using driver initilization and login into the app
+2022-12-15T17:33:02 INFO going to enter url 
+2022-12-15T17:33:05 INFO Login page object returned
+2022-12-15T17:33:05 INFO loginWithValidCredentials function started 
+2022-12-15T17:33:19 INFO Creating DashBoard  page object 
+2022-12-15T17:33:19 INFO returning Dashboard page object
+2022-12-15T17:33:22 INFO Close driver
+2022-12-15T17:33:22 INFO Launch Application using driver initilization and login into the app
+2022-12-15T17:33:26 INFO going to enter url 
+2022-12-15T17:33:28 INFO Login page object returned
+2022-12-15T17:33:28 INFO loginWithValidCredentials function started 
+2022-12-15T17:33:41 INFO Creating DashBoard  page object 
+2022-12-15T17:33:41 INFO returning Dashboard page object
+2022-12-15T17:33:44 INFO Close driver

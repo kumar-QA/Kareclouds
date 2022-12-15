@@ -1,15 +1,19 @@
 package com.Kareclouds.Pages;
 
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ForgotPage extends GenericPage {
-
-	public ForgotPage(WebDriver Driver) {
+	public Logger log;
+	public WebDriver driver;
+	public ForgotPage(WebDriver Driver,Logger log) {
 		super(Driver);
-		PageFactory.initElements(Driver, this);
+		this.log=log;
+		driver=Driver;
+		PageFactory.initElements(driver, this);
 	}
 
 	@FindBy(id = "form-username")

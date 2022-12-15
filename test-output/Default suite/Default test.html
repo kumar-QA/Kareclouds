@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Dec 09 12:06:34 IST 2022</td>
+<td>Started on:</td><td>Thu Dec 15 17:32:22 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>29 seconds (29358 ms)</td>
+<tr><td>Total time:</td><td>83 seconds (83153 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,38 +76,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.Kareclouds.TestPages.LoginPageTest.VerifyLoginFunction()'><b>VerifyLoginFunction</b><br>Test class: com.Kareclouds.TestPages.LoginPageTest</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 20.000
-  (Session info: chrome=108.0.5359.98)
-Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
-System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;16.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e5ca4680efde287491334d55d1ebf7e5, clickElement {id=b5832d92-7b1c-4766-85c7-0a0bb46b1531}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.98, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\PRASAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52728}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52728/devtoo..., se:cdpVersion: 108.0.5359.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (e5ca4680efde287491334d55d1ebf7e5)] -&gt; xpath: //button[@type=&apos;submit&apos; and @class=&apos;btn&apos;]]
-Session ID: e5ca4680efde287491334d55d1ebf7e5
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at jdk.proxy2/jdk.proxy2.$Proxy20.click(Unknown Source)
-	at com.Kareclouds.Pages.LoginPage.loginWithValidCredentials(LoginPage.java:40)
-	at com.Kareclouds.TestPages.LoginPageTest.VerifyLoginFunction(LoginPageTest.java:15)
+<td title='com.Kareclouds.TestPages.FrontOfficeTest.VerifyAppointmentPriorityPageLink()'><b>VerifyAppointmentPriorityPageLink</b><br>Test class: com.Kareclouds.TestPages.FrontOfficeTest</td>
+<td><div><pre>java.lang.AssertionError: expected [Appointment Priority List ] but found [Appointment Priority List]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at com.Kareclouds.TestPages.FrontOfficeTest.VerifyAppointmentPriorityPageLink(FrontOfficeTest.java:44)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -136,38 +113,15 @@ Session ID: e5ca4680efde287491334d55d1ebf7e5
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace401194142", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace401194142'><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 20.000
-  (Session info: chrome=108.0.5359.98)
-Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
-System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;16.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e5ca4680efde287491334d55d1ebf7e5, clickElement {id=b5832d92-7b1c-4766-85c7-0a0bb46b1531}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.98, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\PRASAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52728}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52728/devtoo..., se:cdpVersion: 108.0.5359.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (e5ca4680efde287491334d55d1ebf7e5)] -&gt; xpath: //button[@type=&apos;submit&apos; and @class=&apos;btn&apos;]]
-Session ID: e5ca4680efde287491334d55d1ebf7e5
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at jdk.proxy2/jdk.proxy2.$Proxy20.click(Unknown Source)
-	at com.Kareclouds.Pages.LoginPage.loginWithValidCredentials(LoginPage.java:40)
-	at com.Kareclouds.TestPages.LoginPageTest.VerifyLoginFunction(LoginPageTest.java:15)
+</pre></div><a href='#' onClick='toggleBox("stack-trace542641486", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace542641486'><pre>java.lang.AssertionError: expected [Appointment Priority List ] but found [Appointment Priority List]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at com.Kareclouds.TestPages.FrontOfficeTest.VerifyAppointmentPriorityPageLink(FrontOfficeTest.java:44)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -197,8 +151,27 @@ Session ID: e5ca4680efde287491334d55d1ebf7e5
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>20</td>
-<td>com.Kareclouds.TestPages.LoginPageTest@2eae8e6e</td></tr>
+<td>18</td>
+<td>com.Kareclouds.TestPages.FrontOfficeTest@5b1669c0</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Kareclouds.TestPages.FrontOfficeTest.VerifyComplainTypePageLink()'><b>VerifyComplainTypePageLink</b><br>Test class: com.Kareclouds.TestPages.FrontOfficeTest</td>
+<td></td>
+<td>16</td>
+<td>com.Kareclouds.TestPages.FrontOfficeTest@5b1669c0</td></tr>
+<tr>
+<td title='com.Kareclouds.TestPages.FrontOfficeTest.VerifySourcePageLink()'><b>VerifySourcePageLink</b><br>Test class: com.Kareclouds.TestPages.FrontOfficeTest</td>
+<td></td>
+<td>16</td>
+<td>com.Kareclouds.TestPages.FrontOfficeTest@5b1669c0</td></tr>
 </table><p>
 </body>
 </html>

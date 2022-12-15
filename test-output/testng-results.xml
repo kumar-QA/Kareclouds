@@ -1,61 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="5" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-09T12:06:34 IST" name="Default suite" finished-at="2022-12-09T12:07:04 IST" duration-ms="29358">
+  <suite started-at="2022-12-15T17:32:22 IST" name="Default suite" finished-at="2022-12-15T17:33:45 IST" duration-ms="83153">
     <groups>
     </groups>
-    <test started-at="2022-12-09T12:06:34 IST" name="Default test" finished-at="2022-12-09T12:07:04 IST" duration-ms="29358">
-      <class name="com.Kareclouds.TestPages.LoginPageTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.Kareclouds.TestPages.LoginPageTest@2eae8e6e]" started-at="2022-12-09T12:06:34 IST" name="launchApplication" finished-at="2022-12-09T12:06:43 IST" duration-ms="8306" status="PASS">
+    <test started-at="2022-12-15T17:32:22 IST" name="Default test" finished-at="2022-12-15T17:33:45 IST" duration-ms="83153">
+      <class name="com.Kareclouds.TestPages.FrontOfficeTest">
+        <test-method is-config="true" signature="launchApplication(org.testng.ITestContext)[pri:0, instance:com.Kareclouds.TestPages.FrontOfficeTest@5b1669c0]" started-at="2022-12-15T17:32:22 IST" name="launchApplication" finished-at="2022-12-15T17:32:34 IST" duration-ms="11832" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6acffb2d]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="VerifyLoginFunction()[pri:0, instance:com.Kareclouds.TestPages.LoginPageTest@2eae8e6e]" started-at="2022-12-09T12:06:43 IST" name="VerifyLoginFunction" finished-at="2022-12-09T12:07:03 IST" duration-ms="20396" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="VerifyAppointmentPriorityPageLink()[pri:0, instance:com.Kareclouds.TestPages.FrontOfficeTest@5b1669c0]" started-at="2022-12-15T17:32:34 IST" name="VerifyAppointmentPriorityPageLink" finished-at="2022-12-15T17:32:53 IST" duration-ms="18945" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[timeout: Timed out receiving message from renderer: 20.000
-  (Session info: chrome=108.0.5359.98)
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '16.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e5ca4680efde287491334d55d1ebf7e5, clickElement {id=b5832d92-7b1c-4766-85c7-0a0bb46b1531}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.98, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\PRASAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52728}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52728/devtoo..., se:cdpVersion: 108.0.5359.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (e5ca4680efde287491334d55d1ebf7e5)] -> xpath: //button[@type='submit' and @class='btn']]
-Session ID: e5ca4680efde287491334d55d1ebf7e5]]>
+              <![CDATA[expected [Appointment Priority List ] but found [Appointment Priority List]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 20.000
-  (Session info: chrome=108.0.5359.98)
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '16.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e5ca4680efde287491334d55d1ebf7e5, clickElement {id=b5832d92-7b1c-4766-85c7-0a0bb46b1531}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.98, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\PRASAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52728}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52728/devtoo..., se:cdpVersion: 108.0.5359.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (e5ca4680efde287491334d55d1ebf7e5)] -> xpath: //button[@type='submit' and @class='btn']]
-Session ID: e5ca4680efde287491334d55d1ebf7e5
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-at jdk.proxy2/jdk.proxy2.$Proxy20.click(Unknown Source)
-at com.Kareclouds.Pages.LoginPage.loginWithValidCredentials(LoginPage.java:40)
-at com.Kareclouds.TestPages.LoginPageTest.VerifyLoginFunction(LoginPageTest.java:15)
+              <![CDATA[java.lang.AssertionError: expected [Appointment Priority List ] but found [Appointment Priority List]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at com.Kareclouds.TestPages.FrontOfficeTest.VerifyAppointmentPriorityPageLink(FrontOfficeTest.java:44)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -86,15 +62,53 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyLoginFunction -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Kareclouds.TestPages.LoginPageTest@2eae8e6e]" started-at="2022-12-09T12:07:03 IST" name="tearDown" finished-at="2022-12-09T12:07:04 IST" duration-ms="574" status="PASS">
+        </test-method> <!-- VerifyAppointmentPriorityPageLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Kareclouds.TestPages.FrontOfficeTest@5b1669c0]" started-at="2022-12-15T17:32:53 IST" name="tearDown" finished-at="2022-12-15T17:32:58 IST" duration-ms="4595" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.Kareclouds.TestPages.LoginPageTest -->
+        <test-method is-config="true" signature="launchApplication(org.testng.ITestContext)[pri:0, instance:com.Kareclouds.TestPages.FrontOfficeTest@5b1669c0]" started-at="2022-12-15T17:32:58 IST" name="launchApplication" finished-at="2022-12-15T17:33:05 IST" duration-ms="7419" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6acffb2d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="VerifyComplainTypePageLink()[pri:0, instance:com.Kareclouds.TestPages.FrontOfficeTest@5b1669c0]" started-at="2022-12-15T17:33:05 IST" name="VerifyComplainTypePageLink" finished-at="2022-12-15T17:33:22 IST" duration-ms="16762" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyComplainTypePageLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Kareclouds.TestPages.FrontOfficeTest@5b1669c0]" started-at="2022-12-15T17:33:22 IST" name="tearDown" finished-at="2022-12-15T17:33:22 IST" duration-ms="509" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication(org.testng.ITestContext)[pri:0, instance:com.Kareclouds.TestPages.FrontOfficeTest@5b1669c0]" started-at="2022-12-15T17:33:22 IST" name="launchApplication" finished-at="2022-12-15T17:33:28 IST" duration-ms="5817" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6acffb2d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="VerifySourcePageLink()[pri:0, instance:com.Kareclouds.TestPages.FrontOfficeTest@5b1669c0]" started-at="2022-12-15T17:33:28 IST" name="VerifySourcePageLink" finished-at="2022-12-15T17:33:44 IST" duration-ms="16111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifySourcePageLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Kareclouds.TestPages.FrontOfficeTest@5b1669c0]" started-at="2022-12-15T17:33:44 IST" name="tearDown" finished-at="2022-12-15T17:33:45 IST" duration-ms="1073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.Kareclouds.TestPages.FrontOfficeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

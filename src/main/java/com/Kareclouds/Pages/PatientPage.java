@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -12,11 +13,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.sun.tools.sjavac.Log;
+
 public class PatientPage extends GenericPage {
 
 	public WebDriver driver;
 	public String result;
 	public String order;
+	public Logger log;
 	List<String> patient=new ArrayList<String>();
 	List<WebElement> TotalIds;
 	boolean flag;
@@ -25,10 +29,11 @@ public class PatientPage extends GenericPage {
 	int totalpages;
 	List<List<String>> data;
 
-	public PatientPage(WebDriver Driver) {
+	public PatientPage(WebDriver Driver,Logger Log) {
 		super(Driver);
 		driver = Driver;
-		PageFactory.initElements(Driver, this);
+		this.log=Log;
+		PageFactory.initElements(driver, this);
 	}
 // ---------------------------FormElements--------------------------------------
 	@FindBy(id = "name")
@@ -70,6 +75,9 @@ public class PatientPage extends GenericPage {
 	WebElement searchEle;
 	@FindBy(xpath="//div[@class='box-tools pull-right']/a[contains(text(),'Disabled Patient List')]")
 	WebElement DisablePatientLink;
+	
+	@FindBy(xpath="//a[@class='paginate_button next']")
+	WebElement nextBtn;
 	
 //---------------Table Elements---------------------------
 
@@ -221,7 +229,7 @@ public class PatientPage extends GenericPage {
 	
 	public DisabledPatientPage gotoDisabledPatientPage() {
 		DisablePatientLink.click();
-		DisabledPatientPage disabledPatient_pg=new DisabledPatientPage(driver);
+		DisabledPatientPage disabledPatient_pg=new DisabledPatientPage(driver,log);
 		return disabledPatient_pg;
 	}
 	
@@ -345,17 +353,15 @@ public class PatientPage extends GenericPage {
 	public void addingDataToList(int no) throws InterruptedException {
 		totalpages=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@aria-controls=\"DataTables_Table_0\"]")).size();
 		System.out.println("Totalpages :"+totalpages);
-		List<WebElement> links=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
-		System.out.println("Total Links:"+links.size());
 		 TotalIds=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));	
 		for(WebElement ele:TotalIds) {
 			patient.add(ele.getText());
 		}
-		for(int i=0;i<totalpages;i++) {
+		for(int i=0;i<totalpages-1;i++) {
 			try {
-				links.get(i).click();
-				Thread.sleep(2500);
-				
+				nextBtn.click();
+				log.info("clicked on the linkNo "+i);
+				Thread.sleep(2500);	
 				driver.findElement(By.xpath("//a[@class='sidebar-toggle']")).click();
 				driver.manage().window().minimize();
 				driver.manage().window().maximize();
@@ -367,6 +373,7 @@ public class PatientPage extends GenericPage {
 	            System.out.println("no further links");
 	            break;
 	        }
+			System.out.println(patient.size());
 			
 		}
 		//************************* sorting through java**********************
@@ -387,19 +394,18 @@ public class PatientPage extends GenericPage {
 		js.executeScript("window.scrollTo(0, 0);"); 
 
 	}
+	List<WebElement> TotalIdsReverseOrder;
 	public List<List<String>> addingSortedDataToList(int no) throws InterruptedException {
-	
 	List<String> sortedArrayWithWebTable=new ArrayList<String>();
 	Thread.sleep(1500);
-	List<WebElement> TotalIdsReverseOrder=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));
+	TotalIdsReverseOrder=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));
 	 for(WebElement ele:TotalIdsReverseOrder) {
 		 sortedArrayWithWebTable.add(ele.getText());
 	 }
-	List<WebElement> AfterSortlinks=driver.findElements(By.xpath("//div[@id='DataTables_Table_0_paginate']/span/a[@class='paginate_button ']"));
-	for(int i=0;i<totalpages;i++) {
+	 for(int i=0;i<totalpages-1;i++) {
 		try {
-			AfterSortlinks.get(i).click();
-			Thread.sleep(2000);
+			nextBtn.click();
+			Thread.sleep(1000);
 			TotalIdsReverseOrder=driver.findElements(By.xpath("//table[@id='DataTables_Table_0']/tbody/tr/td["+no+"]"));
 			for(WebElement ele:TotalIdsReverseOrder) {
 				sortedArrayWithWebTable.add(ele.getText());
@@ -409,6 +415,7 @@ public class PatientPage extends GenericPage {
             break;
         }
 	}
+     System.out.println("Total Records :"+TotalIdsReverseOrder.size());
 	System.out.println("*****************sorting through Web table*************************");
 	 for(String ele:sortedArrayWithWebTable) {System.out.println(ele);}
 	List<List<String>> data=new ArrayList<List<String>>();
@@ -416,7 +423,6 @@ public class PatientPage extends GenericPage {
 	data.add(sortedArrayWithWebTable);
 	System.out.println("list 1:"+data.get(0));
 	System.out.println("list 1:"+data.get(1));
-
 	return data;
 	}
 

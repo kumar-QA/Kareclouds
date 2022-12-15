@@ -43,6 +43,7 @@ public class GenericPage {
 	}
 	public void selectClass(WebElement ele,String Parameter) {
 		Select sel=new Select(ele);
-		sel.selectByVisibleText(Parameter);
+//		sel.selectByVisibleText(Parameter);
+		sel.selectByValue(Parameter);
 	}
 }

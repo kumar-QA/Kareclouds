@@ -1,17 +1,22 @@
 package com.Kareclouds.Pages;
 
+
+
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
 public class LoginPage extends GenericPage {
 	public WebDriver driver;
-
-	public LoginPage(WebDriver Driver) {
+	public Logger log;
+	public LoginPage(WebDriver Driver,Logger Log) {
 		super(Driver);
 		driver = Driver;
-		PageFactory.initElements(Driver, this);
+		this.log=Log;
+		PageFactory.initElements(driver, this);
 	}
 
 	@FindBy(id = "email")
@@ -30,16 +35,20 @@ public class LoginPage extends GenericPage {
 	WebElement PasswordeErrorMsg;
 
 	public void gotoUrl() {
+		log.info("going to enter url ");
 		driver.get("http://kareclouds.com/site/login");
 	}
 	
 	
 	public DashboardPage loginWithValidCredentials(String email, String pwd) throws InterruptedException {
+		log.info("loginWithValidCredentials function started ");
 		UserName.sendKeys(email);
 		Password.sendKeys(pwd);
 		siginBtn.click();
 		Thread.sleep(3000);
-		DashboardPage dashboard_page = new DashboardPage(driver);
+		log.info("Creating DashBoard  page object ");
+		DashboardPage dashboard_page = new DashboardPage(driver,log);
+		log.info("returning Dashboard page object");
 		return dashboard_page;
 	}
 
@@ -64,7 +73,7 @@ public class LoginPage extends GenericPage {
 
 	public ForgotPage clickOnForgotBtn() {
 		forgotBtn.click();
-		ForgotPage forgot_page=new ForgotPage(driver);
+		ForgotPage forgot_page=new ForgotPage(driver,log);
 		return forgot_page;
 	}
 
