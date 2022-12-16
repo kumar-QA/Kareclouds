@@ -18,6 +18,12 @@ public class BedTypePage extends GenericPage {
 	
 	@FindBy(xpath = "//div[@id='DataTables_Table_0_filter']/label/input")
 	WebElement searchinput;
+	@FindBy(xpath="//div[@class='box-tools pull-right']/a")
+	WebElement AddBtn;
+	@FindBy(xpath="//form[@id='addbedtype']//input[@name='name']")
+	WebElement Name;
+	@FindBy(xpath="//button[@id='addbedtypebtn']")
+	WebElement SaveBtn;
 	
 	public String checkPageTitle() {
 		return pageTitle.getText();
@@ -26,7 +32,7 @@ public class BedTypePage extends GenericPage {
 	String result;
 	public String searchOperation(String field){
 		searchinput.sendKeys(field);
-		String data=driver.findElement(By.xpath("//td[contains(text(),'"+field+"')]")).getText();
+		String data=driver.findElement(By.xpath("(//table[@id='DataTables_Table_0']/tbody/tr/td)[1]")).getText();
 		if(data.equalsIgnoreCase(field)) {
 			System.out.print(data);
 			result=data;
@@ -34,5 +40,10 @@ public class BedTypePage extends GenericPage {
 		return result;
 	}
 	
+	public void AddForm(String name) {
+		AddBtn.click();
+		Name.sendKeys(name);
+		SaveBtn.click();
+	}
 
 }

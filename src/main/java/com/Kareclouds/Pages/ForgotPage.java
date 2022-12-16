@@ -29,8 +29,9 @@ public class ForgotPage extends GenericPage {
 	
 	
 	
-	public void errorValidationWithoutEntryEmail() {
+	public String errorValidationWithoutEntryEmail() {
 		SubmitBtn.click();
+		return emailErrorMsg.getText();
 	}
 	public String errorValidationWithInavalidEmail(String email) {
 		Email.sendKeys(email);

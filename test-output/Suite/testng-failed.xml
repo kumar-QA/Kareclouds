@@ -6,13 +6,97 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="com.Kareclouds.TestPages.HospitalChargesTest">
+        <methods>
+          <include name="verifyForrmdetaislWithError"/>
+          <include name="verifyChargeCategoryLink"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.Kareclouds.TestPages.HospitalChargesTest -->
+      <class name="com.Kareclouds.TestPages.DoctorOPDChargeTest">
+        <methods>
+          <include name="VerifyFormDetails"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.Kareclouds.TestPages.DoctorOPDChargeTest -->
+      <class name="com.Kareclouds.TestPages.SourcesTest">
+        <methods>
+          <include name="VerifyComplainTypeSearchFun"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="VerifyaddSourcesForm"/>
+        </methods>
+      </class> <!-- com.Kareclouds.TestPages.SourcesTest -->
+      <class name="com.Kareclouds.TestPages.FrontOfficeTest">
+        <methods>
+          <include name="VerifyComplainTypePageLink"/>
+          <include name="VerifyFrontOfficeSearchFun"/>
+          <include name="launchApplication"/>
+          <include name="VerifySourcePageLink"/>
+          <include name="tearDown"/>
+          <include name="VerifyAppointmentPriorityPageLink"/>
+        </methods>
+      </class> <!-- com.Kareclouds.TestPages.FrontOfficeTest -->
+      <class name="com.Kareclouds.TestPages.ComplainTypeTest">
+        <methods>
+          <include name="VerifyComplainTypeForm"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="VerifyComplainTypeSearchFun"/>
+        </methods>
+      </class> <!-- com.Kareclouds.TestPages.ComplainTypeTest -->
       <class name="com.Kareclouds.TestPages.DashBoardTest">
         <methods>
+          <include name="clickAndVerifyHospialtLink"/>
           <include name="clickAndVerifytPatientLink"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.Kareclouds.TestPages.DashBoardTest -->
+      <class name="com.Kareclouds.TestPages.AppointmentPriorityTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="VerifyComplainTypeSearchFun"/>
+          <include name="tearDown"/>
+          <include name="VerifyComplainTypeForm"/>
+        </methods>
+      </class> <!-- com.Kareclouds.TestPages.AppointmentPriorityTest -->
+      <class name="com.Kareclouds.TestPages.PatientPageTest">
+        <methods>
+          <include name="verifyActionColumnInTable"/>
+          <include name="verifySortingColumnTabel"/>
+          <include name="verifyDisabledPatientLink"/>
+          <include name="verifyActionCol_ListOpeartionTheater"/>
+          <include name="verifyActionCol_ListPharamacyLink"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="verifyActionCol_ListOPDLink"/>
+        </methods>
+      </class> <!-- com.Kareclouds.TestPages.PatientPageTest -->
+      <class name="com.Kareclouds.TestPages.ForgotPasswordTest">
+        <methods>
+          <include name="verifyErrorValidatiOnInvalidEmail"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.Kareclouds.TestPages.ForgotPasswordTest -->
+      <class name="com.Kareclouds.TestPages.BedGroupTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="VerifyformOfBedGroup"/>
+        </methods>
+      </class> <!-- com.Kareclouds.TestPages.BedGroupTest -->
+      <class name="com.Kareclouds.TestPages.FloorTest">
+        <methods>
+          <include name="Verifyform"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="VerifySearchOptionOfCT"/>
+        </methods>
+      </class> <!-- com.Kareclouds.TestPages.FloorTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

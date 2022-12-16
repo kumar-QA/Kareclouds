@@ -3,13 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Kareclouds.TestPages.FrontOfficeTest">
+      <class name="com.Kareclouds.TestPages.PatientPageTest">
         <methods>
+          <include name="verifySortingColumnTabel"/>
+          <include name="verifyActionCol_ListOpeartionTheater"/>
           <include name="launchApplication"/>
+          <include name="verifyActionCol_ListPharamacyLink"/>
           <include name="tearDown"/>
-          <include name="VerifyAppointmentPriorityPageLink"/>
+          <include name="verifyActionCol_ListOPDLink"/>
         </methods>
-      </class> <!-- com.Kareclouds.TestPages.FrontOfficeTest -->
+      </class> <!-- com.Kareclouds.TestPages.PatientPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

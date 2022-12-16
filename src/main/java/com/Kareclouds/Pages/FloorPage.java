@@ -20,6 +20,16 @@ public class FloorPage extends GenericPage {
 	@FindBy(xpath = "//div[@id='DataTables_Table_0_filter']/label/input")
 	WebElement searchinput;
 	
+	@FindBy(xpath="//div[@class='box-tools pull-right']/a")
+	WebElement AddBtn;
+	@FindBy(xpath="//form[@id='addfloor']//input[@name='name']")
+	WebElement Name;
+	@FindBy(xpath="//form[@id='addfloor']//input[@name='name']")
+	WebElement Description;
+	@FindBy(xpath="//button[@id='addfloorbtn']")
+	WebElement SaveBtn;
+	
+	
 	public String checkPageTitle() {
 		return pageTitle.getText();
 	}
@@ -27,12 +37,19 @@ public class FloorPage extends GenericPage {
 	String result;
 	public String searchOperation(String field){
 		searchinput.sendKeys(field);
-		String data=driver.findElement(By.xpath("//td[contains(text(),'"+field+"')]")).getText();
+		String data=driver.findElement(By.xpath("(//table[@id='DataTables_Table_0']/tbody/tr/td)[1]")).getText();
 		if(data.equalsIgnoreCase(field)) {
 			System.out.print(data);
 			result=data;
 		}
 		return result;
+	}
+	
+	public void AddForm(String name,String des) {
+		AddBtn.click();
+		Name.sendKeys(name);
+		Description.sendKeys(des);
+		SaveBtn.click();
 	}
 	
 }

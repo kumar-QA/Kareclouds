@@ -19,6 +19,18 @@ public class BedGroupPage extends GenericPage{
 	@FindBy(xpath = "//div[@id='DataTables_Table_0_filter']/label/input")
 	WebElement searchinput;
 	
+	@FindBy(xpath="//div[@class='box-tools pull-right']/a")
+	WebElement AddBtn;
+	@FindBy(xpath="//form[@id='addward']//input[@name='name']")
+	WebElement Name;
+	@FindBy(xpath="//form[@id='addward']//select[@name='floor']")
+	WebElement floorDropdown;
+	@FindBy(xpath="//form[@id='addward']//input[@name='name']")
+	WebElement Description;
+	
+	@FindBy(xpath="//button[@id='addwardbtn']")
+	WebElement SaveBtn;
+	
 	
 	public String checkPageTitle() {
 		return pageTitle.getText();
@@ -28,12 +40,21 @@ public class BedGroupPage extends GenericPage{
 	String result;
 	public String searchOperation(String field){
 		searchinput.sendKeys(field);
-		String data=driver.findElement(By.xpath("//td[contains(text(),'"+field+"')]")).getText();
+		String data=driver.findElement(By.xpath("(//table[@id='DataTables_Table_0']/tbody/tr/td)[1]")).getText();
 		if(data.equalsIgnoreCase(field)) {
 			System.out.print(data);
 			result=data;
 		}
 		return result;
+	}
+	
+	
+	public void AddForm(String name,String floortype,String des) {
+		AddBtn.click();
+		Name.sendKeys(name);
+		selectClass(floorDropdown,floortype);
+		Description.sendKeys(des);
+		SaveBtn.click();
 	}
 	
 }

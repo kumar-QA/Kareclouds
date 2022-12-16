@@ -6,12 +6,23 @@
   </listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <!--  <class name="com.Kareclouds.TestPages.HospitalChargesTest"/>
-      <class name="com.Kareclouds.TestPages.BaseTest"/>
-      <class name="com.Kareclouds.TestPages.PatientPageTest"/>
+    <class name="com.Kareclouds.TestPages.ForgotPasswordTest"/>
       <class name="com.Kareclouds.TestPages.LoginPageTest"/>
-      -->
       <class name="com.Kareclouds.TestPages.DashBoardTest"/>
+      <class name="com.Kareclouds.TestPages.PatientPageTest"/>
+      <class name="com.Kareclouds.TestPages.HospitalChargesTest"/>
+	  <class name="com.Kareclouds.TestPages.ChargeCategoryTest"/>
+	  <class name="com.Kareclouds.TestPages.DoctorOPDChargeTest"/>
+	  <class name="com.Kareclouds.TestPages.ChargeTypeTest"/>
+	  <class name="com.Kareclouds.TestPages.MainBedTest"/>
+	  <class name="com.Kareclouds.TestPages.BedTest"/>
+	  <class name="com.Kareclouds.TestPages.BedTypeTest"/>
+	  <class name="com.Kareclouds.TestPages.BedGroupTest"/>
+	  <class name="com.Kareclouds.TestPages.FloorTest"/>
+	  <class name="com.Kareclouds.TestPages.FrontOfficeTest"/>
+	  <class name="com.Kareclouds.TestPages.ComplainTypeTest"/>
+	  <class name="com.Kareclouds.TestPages.SourcesTest"/>
+	  <class name="com.Kareclouds.TestPages.AppointmentPriorityTest"/> 
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test> 
+</suite> 

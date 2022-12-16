@@ -276,6 +276,7 @@ public class PatientPage extends GenericPage {
 			data=addingSortedDataToList(ColumnNumber);	
 		}else if(ColumnName.equalsIgnoreCase("patientname")){
 			addingDataToList(ColumnNumber);
+//			Collections.sort(patient);
 			  Collections.sort(patient, new Comparator<String>() {
 				    @Override
 				    public int compare(String s1, String s2) {
@@ -357,7 +358,7 @@ public class PatientPage extends GenericPage {
 		for(WebElement ele:TotalIds) {
 			patient.add(ele.getText());
 		}
-		for(int i=0;i<totalpages-1;i++) {
+		for(int i=0;i<=totalpages-1;i++) {
 			try {
 				nextBtn.click();
 				log.info("clicked on the linkNo "+i);
@@ -369,7 +370,7 @@ public class PatientPage extends GenericPage {
 				for(WebElement ele:TotalIds) {
 					patient.add(ele.getText());
 				}
-			} catch (IndexOutOfBoundsException e) {
+			} catch (Exception e) {
 	            System.out.println("no further links");
 	            break;
 	        }

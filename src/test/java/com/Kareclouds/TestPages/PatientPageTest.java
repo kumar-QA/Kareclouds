@@ -18,7 +18,7 @@ public class PatientPageTest extends BaseTest{
    public void verifyFormDetails() throws InterruptedException {
 	   dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
 		patient_page=dashboard_page.selectPatientLink();
-		String result=patient_page.enterFormDetails("kumar", "moses","Male","March 1994","12","O+","Single","C:\\Users\\prasannakumar\\Pictures\\t.jpg","9123456795","kumar@gmail.com","Hno:12 hyderbad","nothing","No allergies");
+		String result=patient_page.enterFormDetails("pavan", "pradeep","Male","March 1998","12","O+","Single","C:\\Users\\prasannakumar\\Pictures\\t.jpg","9123456795","kumar@gmail.com","Hno:12 hyderbad","nothing","No allergies");
 		Assert.assertEquals(result,"Record Saved Successfully");
 	
    }
@@ -44,7 +44,7 @@ public class PatientPageTest extends BaseTest{
  public void verifySortingColumnTabel() throws InterruptedException {
 	   		dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
 	 		patient_page=dashboard_page.selectPatientLink();
-	 		List<List<String>> result=patient_page.sortingEachColumn("patientid",1);
+	 		List<List<String>> result=patient_page.sortingEachColumn("patientname",2);
 	 		Assert.assertEquals(result.get(0), result.get(1));
  }
    

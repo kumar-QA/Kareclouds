@@ -1,12 +1,16 @@
 package com.Kareclouds.TestPages;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -66,6 +70,14 @@ public class BaseTest {
 		log.info("Close driver");
 		driver.close();
 		
+	}
+	
+	public String getScreenshot(String testCaseName,WebDriver driver) throws IOException {
+		TakesScreenshot scrnshot=(TakesScreenshot)driver;
+		File scrFile=scrnshot.getScreenshotAs(OutputType.FILE);
+		File dstFile=new File("E:\\Eclipse_workspace\\Kareclouds\\Screenshots\\" +testCaseName +".png");
+		FileUtils.copyFile(scrFile, dstFile);
+		return "E:\\Eclipse_workspace\\Kareclouds\\Screenshots\\" +testCaseName +".png";
 	}
 	
 }

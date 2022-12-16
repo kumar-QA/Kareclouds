@@ -621,3 +621,604 @@ java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent
 2022-12-15T17:33:41 INFO Creating DashBoard  page object 
 2022-12-15T17:33:41 INFO returning Dashboard page object
 2022-12-15T17:33:44 INFO Close driver
+2022-12-15T18:13:33 INFO Launch Application using driver initilization and login into the app
+2022-12-15T18:13:33 INFO Close driver
+2022-12-15T18:17:12 INFO Launch Application using driver initilization and login into the app
+2022-12-15T18:17:12 INFO Close driver
+2022-12-15T18:35:44 INFO Launch Application using driver initilization and login into the app
+2022-12-15T18:35:44 INFO Close driver
+2022-12-15T18:36:32 INFO Launch Application using driver initilization and login into the app
+2022-12-15T18:36:52 INFO going to enter url 
+2022-12-15T18:37:02 INFO Login page object returned
+2022-12-15T18:37:02 INFO loginWithValidCredentials function started 
+2022-12-15T18:37:22 INFO Creating DashBoard  page object 
+2022-12-15T18:37:22 INFO returning Dashboard page object
+2022-12-15T18:37:28 INFO clicked on the linkNo 0
+2022-12-15T18:37:34 INFO clicked on the linkNo 1
+2022-12-15T18:38:27 INFO Close driver
+2022-12-15T18:53:04 INFO Launch Application using driver initilization and login into the app
+2022-12-15T18:53:10 INFO going to enter url 
+2022-12-15T18:53:12 INFO Login page object returned
+2022-12-15T18:53:12 INFO loginWithValidCredentials function started 
+2022-12-15T18:53:24 INFO Creating DashBoard  page object 
+2022-12-15T18:53:24 INFO returning Dashboard page object
+2022-12-15T18:53:30 INFO clicked on the linkNo 0
+2022-12-15T18:53:35 INFO clicked on the linkNo 1
+2022-12-15T18:54:22 INFO Close driver
+2022-12-15T23:11:35 INFO Launch Application using driver initilization and login into the app
+2022-12-15T23:11:47 INFO going to enter url 
+2022-12-15T23:11:49 INFO Login page object returned
+2022-12-15T23:11:49 INFO loginWithValidCredentials function started 
+2022-12-15T23:12:01 INFO Creating DashBoard  page object 
+2022-12-15T23:12:01 INFO returning Dashboard page object
+2022-12-15T23:12:45 INFO Close driver
+2022-12-15T23:22:33 INFO Launch Application using driver initilization and login into the app
+2022-12-15T23:22:38 INFO going to enter url 
+2022-12-15T23:22:40 INFO Login page object returned
+2022-12-15T23:22:40 INFO loginWithValidCredentials function started 
+2022-12-15T23:22:51 INFO Creating DashBoard  page object 
+2022-12-15T23:22:51 INFO returning Dashboard page object
+2022-12-15T23:22:54 INFO Close driver
+2022-12-15T23:23:59 INFO Launch Application using driver initilization and login into the app
+2022-12-15T23:24:03 INFO going to enter url 
+2022-12-15T23:24:05 INFO Login page object returned
+2022-12-15T23:24:05 INFO loginWithValidCredentials function started 
+2022-12-15T23:24:14 INFO Creating DashBoard  page object 
+2022-12-15T23:24:14 INFO returning Dashboard page object
+2022-12-15T23:24:58 INFO Close driver
+2022-12-15T23:25:01 INFO Launch Application using driver initilization and login into the app
+2022-12-15T23:25:06 INFO going to enter url 
+2022-12-15T23:25:08 INFO Login page object returned
+2022-12-15T23:25:08 INFO loginWithValidCredentials function started 
+2022-12-15T23:25:17 INFO Creating DashBoard  page object 
+2022-12-15T23:25:17 INFO returning Dashboard page object
+2022-12-15T23:26:01 INFO Close driver
+2022-12-15T23:27:22 INFO Launch Application using driver initilization and login into the app
+2022-12-15T23:27:27 INFO going to enter url 
+2022-12-15T23:27:29 INFO Login page object returned
+2022-12-15T23:27:29 INFO loginWithValidCredentials function started 
+2022-12-15T23:27:40 INFO Creating DashBoard  page object 
+2022-12-15T23:27:40 INFO returning Dashboard page object
+2022-12-15T23:27:45 INFO Close driver
+2022-12-15T23:30:06 INFO Launch Application using driver initilization and login into the app
+2022-12-15T23:30:11 INFO going to enter url 
+2022-12-15T23:30:13 INFO Login page object returned
+2022-12-15T23:30:13 INFO loginWithValidCredentials function started 
+2022-12-15T23:30:23 INFO Creating DashBoard  page object 
+2022-12-15T23:30:23 INFO returning Dashboard page object
+2022-12-15T23:31:06 INFO Close driver
+2022-12-15T23:31:06 INFO Launch Application using driver initilization and login into the app
+2022-12-15T23:31:09 INFO going to enter url 
+2022-12-15T23:31:11 INFO Login page object returned
+2022-12-15T23:31:11 INFO loginWithValidCredentials function started 
+2022-12-15T23:31:20 INFO Creating DashBoard  page object 
+2022-12-15T23:31:20 INFO returning Dashboard page object
+2022-12-15T23:31:24 INFO Close driver
+2022-12-15T23:32:15 INFO Launch Application using driver initilization and login into the app
+2022-12-15T23:32:20 INFO going to enter url 
+2022-12-15T23:32:22 INFO Login page object returned
+2022-12-15T23:32:22 INFO loginWithValidCredentials function started 
+2022-12-15T23:32:32 INFO Creating DashBoard  page object 
+2022-12-15T23:32:32 INFO returning Dashboard page object
+2022-12-15T23:32:36 INFO Close driver
+2022-12-15T23:32:36 INFO Launch Application using driver initilization and login into the app
+2022-12-15T23:32:40 INFO going to enter url 
+2022-12-15T23:32:42 INFO Login page object returned
+2022-12-15T23:32:42 INFO loginWithValidCredentials function started 
+2022-12-15T23:32:51 INFO Creating DashBoard  page object 
+2022-12-15T23:32:51 INFO returning Dashboard page object
+2022-12-15T23:32:55 INFO Close driver
+2022-12-15T23:34:56 INFO Launch Application using driver initilization and login into the app
+2022-12-15T23:35:01 INFO going to enter url 
+2022-12-15T23:35:03 INFO Login page object returned
+2022-12-15T23:35:03 INFO loginWithValidCredentials function started 
+2022-12-15T23:35:14 INFO Creating DashBoard  page object 
+2022-12-15T23:35:14 INFO returning Dashboard page object
+2022-12-15T23:35:18 INFO Close driver
+2022-12-15T23:35:53 INFO Launch Application using driver initilization and login into the app
+2022-12-15T23:35:58 INFO going to enter url 
+2022-12-15T23:36:00 INFO Login page object returned
+2022-12-15T23:36:00 INFO loginWithValidCredentials function started 
+2022-12-15T23:36:10 INFO Creating DashBoard  page object 
+2022-12-15T23:36:10 INFO returning Dashboard page object
+2022-12-15T23:36:13 INFO Close driver
+2022-12-15T23:36:18 INFO Launch Application using driver initilization and login into the app
+2022-12-15T23:36:21 INFO going to enter url 
+2022-12-15T23:36:22 INFO Login page object returned
+2022-12-15T23:36:22 INFO loginWithValidCredentials function started 
+2022-12-15T23:36:31 INFO Creating DashBoard  page object 
+2022-12-15T23:36:31 INFO returning Dashboard page object
+2022-12-15T23:36:35 INFO Close driver
+2022-12-15T23:38:08 INFO Launch Application using driver initilization and login into the app
+2022-12-15T23:38:13 INFO going to enter url 
+2022-12-15T23:38:14 INFO Login page object returned
+2022-12-15T23:38:14 INFO loginWithValidCredentials function started 
+2022-12-15T23:38:24 INFO Creating DashBoard  page object 
+2022-12-15T23:38:24 INFO returning Dashboard page object
+2022-12-15T23:38:28 INFO Close driver
+2022-12-15T23:38:28 INFO Launch Application using driver initilization and login into the app
+2022-12-15T23:38:32 INFO going to enter url 
+2022-12-15T23:38:34 INFO Login page object returned
+2022-12-15T23:38:34 INFO loginWithValidCredentials function started 
+2022-12-15T23:38:44 INFO Creating DashBoard  page object 
+2022-12-15T23:38:44 INFO returning Dashboard page object
+2022-12-15T23:38:47 INFO Close driver
+2022-12-15T23:46:20 INFO Launch Application using driver initilization and login into the app
+2022-12-15T23:46:24 INFO going to enter url 
+2022-12-15T23:46:26 INFO Login page object returned
+2022-12-15T23:46:26 INFO loginWithValidCredentials function started 
+2022-12-15T23:46:36 INFO Creating DashBoard  page object 
+2022-12-15T23:46:36 INFO returning Dashboard page object
+2022-12-15T23:46:38 INFO Close driver
+2022-12-16T00:02:47 INFO Launch Application using driver initilization and login into the app
+2022-12-16T00:02:53 INFO going to enter url 
+2022-12-16T00:02:55 INFO Login page object returned
+2022-12-16T00:02:55 INFO loginWithValidCredentials function started 
+2022-12-16T00:03:07 INFO Creating DashBoard  page object 
+2022-12-16T00:03:07 INFO returning Dashboard page object
+2022-12-16T00:03:10 INFO Close driver
+2022-12-16T00:03:14 INFO Launch Application using driver initilization and login into the app
+2022-12-16T00:03:18 INFO going to enter url 
+2022-12-16T00:03:20 INFO Login page object returned
+2022-12-16T00:03:20 INFO loginWithValidCredentials function started 
+2022-12-16T00:03:29 INFO Creating DashBoard  page object 
+2022-12-16T00:03:29 INFO returning Dashboard page object
+2022-12-16T00:03:30 INFO Close driver
+2022-12-16T00:04:58 INFO Launch Application using driver initilization and login into the app
+2022-12-16T00:05:03 INFO going to enter url 
+2022-12-16T00:05:05 INFO Login page object returned
+2022-12-16T00:05:05 INFO loginWithValidCredentials function started 
+2022-12-16T00:05:15 INFO Creating DashBoard  page object 
+2022-12-16T00:05:15 INFO returning Dashboard page object
+2022-12-16T00:05:16 INFO Close driver
+2022-12-16T00:09:45 INFO Launch Application using driver initilization and login into the app
+2022-12-16T00:09:50 INFO going to enter url 
+2022-12-16T00:09:52 INFO Login page object returned
+2022-12-16T00:09:52 INFO loginWithValidCredentials function started 
+2022-12-16T00:10:01 INFO Creating DashBoard  page object 
+2022-12-16T00:10:01 INFO returning Dashboard page object
+2022-12-16T00:10:04 INFO Close driver
+2022-12-16T00:21:03 INFO Launch Application using driver initilization and login into the app
+2022-12-16T00:21:09 INFO going to enter url 
+2022-12-16T00:21:12 INFO Login page object returned
+2022-12-16T00:21:12 INFO loginWithValidCredentials function started 
+2022-12-16T00:21:22 INFO Creating DashBoard  page object 
+2022-12-16T00:21:22 INFO returning Dashboard page object
+2022-12-16T00:21:25 INFO Close driver
+2022-12-16T00:21:25 INFO Launch Application using driver initilization and login into the app
+2022-12-16T00:21:29 INFO going to enter url 
+2022-12-16T00:21:32 INFO Login page object returned
+2022-12-16T00:21:32 INFO loginWithValidCredentials function started 
+2022-12-16T00:21:43 INFO Creating DashBoard  page object 
+2022-12-16T00:21:43 INFO returning Dashboard page object
+2022-12-16T00:21:46 INFO Close driver
+2022-12-16T00:34:58 INFO Launch Application using driver initilization and login into the app
+2022-12-16T00:35:02 INFO going to enter url 
+2022-12-16T00:35:04 INFO Login page object returned
+2022-12-16T00:35:04 INFO loginWithValidCredentials function started 
+2022-12-16T00:35:19 INFO Creating DashBoard  page object 
+2022-12-16T00:35:19 INFO returning Dashboard page object
+2022-12-16T00:35:57 INFO Close driver
+2022-12-16T00:35:57 INFO Launch Application using driver initilization and login into the app
+2022-12-16T00:36:01 INFO going to enter url 
+2022-12-16T00:36:03 INFO Login page object returned
+2022-12-16T00:36:03 INFO Close driver
+2022-12-16T00:37:11 INFO Launch Application using driver initilization and login into the app
+2022-12-16T00:37:16 INFO going to enter url 
+2022-12-16T00:37:19 INFO Login page object returned
+2022-12-16T00:37:19 INFO loginWithValidCredentials function started 
+2022-12-16T00:37:31 INFO Creating DashBoard  page object 
+2022-12-16T00:37:31 INFO returning Dashboard page object
+2022-12-16T00:37:34 INFO Close driver
+2022-12-16T00:37:35 INFO Launch Application using driver initilization and login into the app
+2022-12-16T00:37:40 INFO going to enter url 
+2022-12-16T00:37:42 INFO Login page object returned
+2022-12-16T00:37:42 INFO loginWithValidCredentials function started 
+2022-12-16T00:37:54 INFO Creating DashBoard  page object 
+2022-12-16T00:37:54 INFO returning Dashboard page object
+2022-12-16T00:37:57 INFO Close driver
+2022-12-16T10:25:37 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:25:50 INFO going to enter url 
+2022-12-16T10:25:53 INFO Login page object returned
+2022-12-16T10:25:53 INFO Verify login function method started in testpage
+2022-12-16T10:25:53 INFO loginWithValidCredentials function started 
+2022-12-16T10:26:03 INFO Creating DashBoard  page object 
+2022-12-16T10:26:03 INFO returning Dashboard page object
+2022-12-16T10:26:03 INFO Is log is displayed true
+2022-12-16T10:26:03 INFO Close driver
+2022-12-16T10:26:04 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:26:08 INFO going to enter url 
+2022-12-16T10:26:11 INFO Login page object returned
+2022-12-16T10:26:12 INFO Close driver
+2022-12-16T10:26:16 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:26:20 INFO going to enter url 
+2022-12-16T10:26:22 INFO Login page object returned
+2022-12-16T10:26:22 INFO verifyEmptyUserNameField method calling
+2022-12-16T10:26:22 INFO Close driver
+2022-12-16T10:26:23 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:26:27 INFO going to enter url 
+2022-12-16T10:26:29 INFO Login page object returned
+2022-12-16T10:26:30 INFO Close driver
+2022-12-16T10:26:31 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:26:35 INFO going to enter url 
+2022-12-16T10:26:37 INFO Login page object returned
+2022-12-16T10:26:38 INFO Close driver
+2022-12-16T10:40:16 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:40:26 INFO going to enter url 
+2022-12-16T10:40:29 INFO Login page object returned
+2022-12-16T10:40:30 INFO Close driver
+2022-12-16T10:40:30 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:40:34 INFO going to enter url 
+2022-12-16T10:40:36 INFO Login page object returned
+2022-12-16T10:40:37 INFO Close driver
+2022-12-16T10:41:41 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:41:46 INFO going to enter url 
+2022-12-16T10:41:48 INFO Login page object returned
+2022-12-16T10:41:48 INFO loginWithValidCredentials function started 
+2022-12-16T10:41:58 INFO Creating DashBoard  page object 
+2022-12-16T10:41:58 INFO returning Dashboard page object
+2022-12-16T10:42:01 INFO Close driver
+2022-12-16T10:42:05 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:42:13 INFO going to enter url 
+2022-12-16T10:42:16 INFO Login page object returned
+2022-12-16T10:42:16 INFO loginWithValidCredentials function started 
+2022-12-16T10:42:27 INFO Creating DashBoard  page object 
+2022-12-16T10:42:27 INFO returning Dashboard page object
+2022-12-16T10:42:29 INFO Close driver
+2022-12-16T10:42:33 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:42:37 INFO going to enter url 
+2022-12-16T10:42:39 INFO Login page object returned
+2022-12-16T10:42:39 INFO loginWithValidCredentials function started 
+2022-12-16T10:42:49 INFO Creating DashBoard  page object 
+2022-12-16T10:42:49 INFO returning Dashboard page object
+2022-12-16T10:42:51 INFO Close driver
+2022-12-16T10:42:51 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:42:58 INFO going to enter url 
+2022-12-16T10:43:00 INFO Login page object returned
+2022-12-16T10:43:00 INFO loginWithValidCredentials function started 
+2022-12-16T10:43:10 INFO Creating DashBoard  page object 
+2022-12-16T10:43:10 INFO returning Dashboard page object
+2022-12-16T10:43:13 INFO Close driver
+2022-12-16T10:45:40 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:45:46 INFO going to enter url 
+2022-12-16T10:45:48 INFO Login page object returned
+2022-12-16T10:45:48 INFO loginWithValidCredentials function started 
+2022-12-16T10:45:58 INFO Creating DashBoard  page object 
+2022-12-16T10:45:58 INFO returning Dashboard page object
+2022-12-16T10:46:01 INFO Close driver
+2022-12-16T10:46:05 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:46:09 INFO going to enter url 
+2022-12-16T10:46:12 INFO Login page object returned
+2022-12-16T10:46:12 INFO loginWithValidCredentials function started 
+2022-12-16T10:46:27 INFO Creating DashBoard  page object 
+2022-12-16T10:46:27 INFO returning Dashboard page object
+2022-12-16T10:47:13 INFO Close driver
+2022-12-16T10:47:13 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:47:17 INFO going to enter url 
+2022-12-16T10:47:19 INFO Login page object returned
+2022-12-16T10:47:19 INFO loginWithValidCredentials function started 
+2022-12-16T10:47:30 INFO Creating DashBoard  page object 
+2022-12-16T10:47:30 INFO returning Dashboard page object
+2022-12-16T10:48:12 INFO Close driver
+2022-12-16T10:48:12 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:48:16 INFO going to enter url 
+2022-12-16T10:48:19 INFO Login page object returned
+2022-12-16T10:48:19 INFO loginWithValidCredentials function started 
+2022-12-16T10:48:30 INFO Creating DashBoard  page object 
+2022-12-16T10:48:30 INFO returning Dashboard page object
+2022-12-16T10:49:13 INFO Close driver
+2022-12-16T10:49:13 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:49:17 INFO going to enter url 
+2022-12-16T10:49:18 INFO Login page object returned
+2022-12-16T10:49:18 INFO loginWithValidCredentials function started 
+2022-12-16T10:49:30 INFO Creating DashBoard  page object 
+2022-12-16T10:49:30 INFO returning Dashboard page object
+2022-12-16T10:49:35 INFO Close driver
+2022-12-16T10:49:36 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:49:40 INFO going to enter url 
+2022-12-16T10:49:43 INFO Login page object returned
+2022-12-16T10:49:43 INFO loginWithValidCredentials function started 
+2022-12-16T10:49:53 INFO Creating DashBoard  page object 
+2022-12-16T10:49:53 INFO returning Dashboard page object
+2022-12-16T10:49:56 INFO Close driver
+2022-12-16T10:50:00 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:50:04 INFO going to enter url 
+2022-12-16T10:50:07 INFO Login page object returned
+2022-12-16T10:50:07 INFO loginWithValidCredentials function started 
+2022-12-16T10:50:19 INFO Creating DashBoard  page object 
+2022-12-16T10:50:19 INFO returning Dashboard page object
+2022-12-16T10:50:54 INFO Close driver
+2022-12-16T10:50:54 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:50:58 INFO going to enter url 
+2022-12-16T10:51:14 INFO Login page object returned
+2022-12-16T10:51:14 INFO loginWithValidCredentials function started 
+2022-12-16T10:51:35 INFO Close driver
+2022-12-16T10:57:45 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:57:50 INFO going to enter url 
+2022-12-16T10:57:52 INFO Login page object returned
+2022-12-16T10:57:53 INFO Close driver
+2022-12-16T10:57:53 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:57:57 INFO going to enter url 
+2022-12-16T10:57:59 INFO Login page object returned
+2022-12-16T10:58:00 INFO Close driver
+2022-12-16T10:58:04 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:58:08 INFO going to enter url 
+2022-12-16T10:58:10 INFO Login page object returned
+2022-12-16T10:58:10 INFO Verify login function method started in testpage
+2022-12-16T10:58:10 INFO loginWithValidCredentials function started 
+2022-12-16T10:58:28 INFO Creating DashBoard  page object 
+2022-12-16T10:58:28 INFO returning Dashboard page object
+2022-12-16T10:58:28 INFO Is log is displayed true
+2022-12-16T10:58:28 INFO Close driver
+2022-12-16T10:58:32 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:58:35 INFO going to enter url 
+2022-12-16T10:58:37 INFO Login page object returned
+2022-12-16T10:58:38 INFO Close driver
+2022-12-16T10:58:39 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:58:42 INFO going to enter url 
+2022-12-16T10:58:45 INFO Login page object returned
+2022-12-16T10:58:45 INFO verifyEmptyUserNameField method calling
+2022-12-16T10:58:45 INFO Close driver
+2022-12-16T10:58:50 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:58:53 INFO going to enter url 
+2022-12-16T10:58:55 INFO Login page object returned
+2022-12-16T10:58:56 INFO Close driver
+2022-12-16T10:58:56 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:59:00 INFO going to enter url 
+2022-12-16T10:59:03 INFO Login page object returned
+2022-12-16T10:59:04 INFO Close driver
+2022-12-16T10:59:04 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:59:08 INFO going to enter url 
+2022-12-16T10:59:10 INFO Login page object returned
+2022-12-16T10:59:10 INFO loginWithValidCredentials function started 
+2022-12-16T10:59:28 INFO Creating DashBoard  page object 
+2022-12-16T10:59:28 INFO returning Dashboard page object
+2022-12-16T10:59:30 INFO Close driver
+2022-12-16T10:59:30 INFO Launch Application using driver initilization and login into the app
+2022-12-16T10:59:33 INFO going to enter url 
+2022-12-16T10:59:36 INFO Login page object returned
+2022-12-16T10:59:36 INFO loginWithValidCredentials function started 
+2022-12-16T10:59:51 INFO Creating DashBoard  page object 
+2022-12-16T10:59:51 INFO returning Dashboard page object
+2022-12-16T10:59:52 INFO Close driver
+2022-12-16T10:59:56 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:00:00 INFO going to enter url 
+2022-12-16T11:00:03 INFO Login page object returned
+2022-12-16T11:00:03 INFO loginWithValidCredentials function started 
+2022-12-16T11:00:23 INFO Close driver
+2022-12-16T11:00:27 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:00:32 INFO going to enter url 
+2022-12-16T11:00:51 INFO Login page object returned
+2022-12-16T11:00:51 INFO loginWithValidCredentials function started 
+2022-12-16T11:01:12 INFO Close driver
+2022-12-16T11:01:12 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:01:16 INFO going to enter url 
+2022-12-16T11:01:21 INFO Login page object returned
+2022-12-16T11:01:21 INFO loginWithValidCredentials function started 
+2022-12-16T11:01:31 INFO Creating DashBoard  page object 
+2022-12-16T11:01:31 INFO returning Dashboard page object
+2022-12-16T11:01:34 INFO Close driver
+2022-12-16T11:01:38 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:01:42 INFO going to enter url 
+2022-12-16T11:01:45 INFO Login page object returned
+2022-12-16T11:01:45 INFO loginWithValidCredentials function started 
+2022-12-16T11:01:57 INFO Creating DashBoard  page object 
+2022-12-16T11:01:57 INFO returning Dashboard page object
+2022-12-16T11:02:42 INFO Close driver
+2022-12-16T11:02:46 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:02:50 INFO going to enter url 
+2022-12-16T11:02:52 INFO Login page object returned
+2022-12-16T11:02:52 INFO loginWithValidCredentials function started 
+2022-12-16T11:03:04 INFO Creating DashBoard  page object 
+2022-12-16T11:03:04 INFO returning Dashboard page object
+2022-12-16T11:03:47 INFO Close driver
+2022-12-16T11:03:47 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:03:51 INFO going to enter url 
+2022-12-16T11:03:53 INFO Login page object returned
+2022-12-16T11:03:53 INFO loginWithValidCredentials function started 
+2022-12-16T11:04:14 INFO Close driver
+2022-12-16T11:04:18 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:04:21 INFO going to enter url 
+2022-12-16T11:04:30 INFO Login page object returned
+2022-12-16T11:04:30 INFO loginWithValidCredentials function started 
+2022-12-16T11:04:53 INFO Creating DashBoard  page object 
+2022-12-16T11:04:53 INFO returning Dashboard page object
+2022-12-16T11:05:07 INFO Close driver
+2022-12-16T11:05:11 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:05:15 INFO going to enter url 
+2022-12-16T11:05:18 INFO Login page object returned
+2022-12-16T11:05:18 INFO loginWithValidCredentials function started 
+2022-12-16T11:05:38 INFO Close driver
+2022-12-16T11:05:38 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:05:42 INFO going to enter url 
+2022-12-16T11:05:44 INFO Login page object returned
+2022-12-16T11:05:44 INFO loginWithValidCredentials function started 
+2022-12-16T11:05:59 INFO Creating DashBoard  page object 
+2022-12-16T11:05:59 INFO returning Dashboard page object
+2022-12-16T11:06:36 INFO Close driver
+2022-12-16T11:06:36 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:06:47 INFO going to enter url 
+2022-12-16T11:06:51 INFO Login page object returned
+2022-12-16T11:06:51 INFO loginWithValidCredentials function started 
+2022-12-16T11:07:12 INFO Close driver
+2022-12-16T11:07:16 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:07:23 INFO going to enter url 
+2022-12-16T11:07:29 INFO Login page object returned
+2022-12-16T11:07:29 INFO loginWithValidCredentials function started 
+2022-12-16T11:07:50 INFO Close driver
+2022-12-16T11:07:54 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:07:57 INFO going to enter url 
+2022-12-16T11:08:13 INFO Login page object returned
+2022-12-16T11:08:13 INFO loginWithValidCredentials function started 
+2022-12-16T11:08:33 INFO Creating DashBoard  page object 
+2022-12-16T11:08:33 INFO returning Dashboard page object
+2022-12-16T11:08:38 INFO Close driver
+2022-12-16T11:08:42 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:08:50 INFO going to enter url 
+2022-12-16T11:09:00 INFO Login page object returned
+2022-12-16T11:09:00 INFO loginWithValidCredentials function started 
+2022-12-16T11:09:13 INFO Creating DashBoard  page object 
+2022-12-16T11:09:13 INFO returning Dashboard page object
+2022-12-16T11:09:16 INFO Close driver
+2022-12-16T11:09:16 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:09:21 INFO going to enter url 
+2022-12-16T11:09:23 INFO Login page object returned
+2022-12-16T11:09:23 INFO loginWithValidCredentials function started 
+2022-12-16T11:09:33 INFO Creating DashBoard  page object 
+2022-12-16T11:09:33 INFO returning Dashboard page object
+2022-12-16T11:09:36 INFO Close driver
+2022-12-16T11:09:36 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:09:40 INFO going to enter url 
+2022-12-16T11:09:42 INFO Login page object returned
+2022-12-16T11:09:42 INFO loginWithValidCredentials function started 
+2022-12-16T11:09:52 INFO Creating DashBoard  page object 
+2022-12-16T11:09:52 INFO returning Dashboard page object
+2022-12-16T11:09:54 INFO Close driver
+2022-12-16T11:09:58 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:10:02 INFO going to enter url 
+2022-12-16T11:10:05 INFO Login page object returned
+2022-12-16T11:10:05 INFO loginWithValidCredentials function started 
+2022-12-16T11:10:16 INFO Creating DashBoard  page object 
+2022-12-16T11:10:16 INFO returning Dashboard page object
+2022-12-16T11:10:20 INFO Close driver
+2022-12-16T11:10:20 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:10:25 INFO going to enter url 
+2022-12-16T11:10:27 INFO Login page object returned
+2022-12-16T11:10:27 INFO loginWithValidCredentials function started 
+2022-12-16T11:10:38 INFO Creating DashBoard  page object 
+2022-12-16T11:10:38 INFO returning Dashboard page object
+2022-12-16T11:10:41 INFO Close driver
+2022-12-16T11:10:41 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:10:45 INFO going to enter url 
+2022-12-16T11:10:47 INFO Login page object returned
+2022-12-16T11:10:47 INFO loginWithValidCredentials function started 
+2022-12-16T11:11:00 INFO Creating DashBoard  page object 
+2022-12-16T11:11:00 INFO returning Dashboard page object
+2022-12-16T11:11:03 INFO Close driver
+2022-12-16T11:11:03 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:11:08 INFO going to enter url 
+2022-12-16T11:11:11 INFO Login page object returned
+2022-12-16T11:11:11 INFO loginWithValidCredentials function started 
+2022-12-16T11:11:21 INFO Creating DashBoard  page object 
+2022-12-16T11:11:21 INFO returning Dashboard page object
+2022-12-16T11:11:24 INFO Close driver
+2022-12-16T11:11:28 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:11:33 INFO going to enter url 
+2022-12-16T11:11:35 INFO Login page object returned
+2022-12-16T11:11:35 INFO loginWithValidCredentials function started 
+2022-12-16T11:11:48 INFO Creating DashBoard  page object 
+2022-12-16T11:11:48 INFO returning Dashboard page object
+2022-12-16T11:11:51 INFO Close driver
+2022-12-16T11:12:05 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:12:09 INFO going to enter url 
+2022-12-16T11:12:12 INFO Login page object returned
+2022-12-16T11:12:12 INFO loginWithValidCredentials function started 
+2022-12-16T11:12:23 INFO Creating DashBoard  page object 
+2022-12-16T11:12:23 INFO returning Dashboard page object
+2022-12-16T11:12:26 INFO Close driver
+2022-12-16T11:12:28 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:12:32 INFO going to enter url 
+2022-12-16T11:12:35 INFO Login page object returned
+2022-12-16T11:12:35 INFO loginWithValidCredentials function started 
+2022-12-16T11:12:46 INFO Creating DashBoard  page object 
+2022-12-16T11:12:46 INFO returning Dashboard page object
+2022-12-16T11:12:49 INFO Close driver
+2022-12-16T11:12:53 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:12:59 INFO going to enter url 
+2022-12-16T11:13:03 INFO Login page object returned
+2022-12-16T11:13:03 INFO loginWithValidCredentials function started 
+2022-12-16T11:13:13 INFO Creating DashBoard  page object 
+2022-12-16T11:13:13 INFO returning Dashboard page object
+2022-12-16T11:13:16 INFO Close driver
+2022-12-16T11:13:20 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:13:25 INFO going to enter url 
+2022-12-16T11:13:27 INFO Login page object returned
+2022-12-16T11:13:27 INFO loginWithValidCredentials function started 
+2022-12-16T11:13:38 INFO Creating DashBoard  page object 
+2022-12-16T11:13:38 INFO returning Dashboard page object
+2022-12-16T11:13:41 INFO Close driver
+2022-12-16T11:13:45 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:13:52 INFO going to enter url 
+2022-12-16T11:13:55 INFO Login page object returned
+2022-12-16T11:13:55 INFO loginWithValidCredentials function started 
+2022-12-16T11:14:04 INFO Creating DashBoard  page object 
+2022-12-16T11:14:04 INFO returning Dashboard page object
+2022-12-16T11:14:08 INFO Close driver
+2022-12-16T11:14:12 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:14:16 INFO going to enter url 
+2022-12-16T11:14:18 INFO Login page object returned
+2022-12-16T11:14:18 INFO loginWithValidCredentials function started 
+2022-12-16T11:14:29 INFO Creating DashBoard  page object 
+2022-12-16T11:14:29 INFO returning Dashboard page object
+2022-12-16T11:14:32 INFO Close driver
+2022-12-16T11:14:33 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:14:37 INFO going to enter url 
+2022-12-16T11:14:40 INFO Login page object returned
+2022-12-16T11:14:40 INFO loginWithValidCredentials function started 
+2022-12-16T11:14:51 INFO Creating DashBoard  page object 
+2022-12-16T11:14:51 INFO returning Dashboard page object
+2022-12-16T11:14:54 INFO Close driver
+2022-12-16T11:14:59 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:15:03 INFO going to enter url 
+2022-12-16T11:15:05 INFO Login page object returned
+2022-12-16T11:15:05 INFO loginWithValidCredentials function started 
+2022-12-16T11:15:15 INFO Creating DashBoard  page object 
+2022-12-16T11:15:15 INFO returning Dashboard page object
+2022-12-16T11:15:19 INFO Close driver
+2022-12-16T11:15:19 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:15:24 INFO going to enter url 
+2022-12-16T11:15:26 INFO Login page object returned
+2022-12-16T11:15:26 INFO loginWithValidCredentials function started 
+2022-12-16T11:15:37 INFO Creating DashBoard  page object 
+2022-12-16T11:15:37 INFO returning Dashboard page object
+2022-12-16T11:15:41 INFO Close driver
+2022-12-16T11:15:45 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:15:50 INFO going to enter url 
+2022-12-16T11:15:52 INFO Login page object returned
+2022-12-16T11:15:52 INFO loginWithValidCredentials function started 
+2022-12-16T11:16:08 INFO Creating DashBoard  page object 
+2022-12-16T11:16:08 INFO returning Dashboard page object
+2022-12-16T11:16:12 INFO Close driver
+2022-12-16T11:16:12 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:16:19 INFO going to enter url 
+2022-12-16T11:16:39 INFO Close driver
+2022-12-16T11:16:43 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:16:48 INFO going to enter url 
+2022-12-16T11:16:56 INFO Login page object returned
+2022-12-16T11:16:56 INFO loginWithValidCredentials function started 
+2022-12-16T11:17:16 INFO Close driver
+2022-12-16T11:17:20 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:17:24 INFO going to enter url 
+2022-12-16T11:17:44 INFO Close driver
+2022-12-16T11:17:44 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:17:50 INFO going to enter url 
+2022-12-16T11:18:10 INFO Close driver
+2022-12-16T11:18:11 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:18:18 INFO going to enter url 
+2022-12-16T11:18:23 INFO Login page object returned
+2022-12-16T11:18:23 INFO Close driver
+2022-12-16T11:18:28 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:18:31 INFO going to enter url 
+2022-12-16T11:18:51 INFO Close driver
+2022-12-16T11:18:55 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:18:59 INFO going to enter url 
+2022-12-16T11:19:14 INFO Login page object returned
+2022-12-16T11:19:14 INFO Close driver
+2022-12-16T11:19:14 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:19:17 INFO going to enter url 
+2022-12-16T11:19:38 INFO Close driver
+2022-12-16T11:19:38 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:19:41 INFO going to enter url 
+2022-12-16T11:20:01 INFO Close driver
+2022-12-16T11:20:01 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:20:04 INFO going to enter url 
+2022-12-16T11:20:24 INFO Close driver
+2022-12-16T11:20:28 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:20:32 INFO going to enter url 
+2022-12-16T11:20:52 INFO Close driver
+2022-12-16T11:20:56 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:21:00 INFO going to enter url 
+2022-12-16T11:21:20 INFO Close driver
+2022-12-16T11:21:24 INFO Launch Application using driver initilization and login into the app
+2022-12-16T11:21:28 INFO going to enter url 
+2022-12-16T11:21:48 INFO Close driver

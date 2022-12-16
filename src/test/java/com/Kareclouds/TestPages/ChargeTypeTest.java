@@ -21,7 +21,7 @@ public class ChargeTypeTest extends BaseTest{
 			Assert.assertEquals(result, "Procedures");
 	   }
 	 
-	 @Test()//------Search Functionality 
+	 @Test()//------form Functionality 
 	   public void VerifyaddchargetypeForm() throws InterruptedException {
 		   dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
 		   hospitalcharges=dashboard_page.selectHospitaltLink();

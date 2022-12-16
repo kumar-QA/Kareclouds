@@ -12,10 +12,10 @@ import com.Kareclouds.Pages.SourcePage;
 public class FrontOfficeTest extends BaseTest{
 
 	public DashboardPage dashboard_page;
+	public FrontOfficePage frontofficepage;
 	public ComplainTypePage complaintypepage;
 	public SourcePage srcpage;
 	public AppointmentPriorityPage appointmentpage;
-	public FrontOfficePage frontofficepage;
 	
 	@Test()
 	public void VerifyComplainTypePageLink() throws InterruptedException {
@@ -43,6 +43,17 @@ public class FrontOfficeTest extends BaseTest{
 		String result=appointmentpage.checkPageTitle();
 		Assert.assertEquals(result, "Appointment Priority List");
 	}
+	
+	@Test()
+	public void VerifyFrontOfficeSearchFun() throws InterruptedException {
+		dashboard_page=login_page.loginWithValidCredentials("superadmin@gmail.com", "Admin@123");
+		frontofficepage=dashboard_page.selectFrontOfficeLink();
+		String result=frontofficepage.searchOperation("General Purpose");
+		Assert.assertEquals(result, "General Purpose");
+		
+	}
+	
+	
 	
 	
 	
